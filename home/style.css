@@ -44,11 +44,19 @@ header {
 .header_container {
     width: 1024px;
     margin: auto;
+    padding: 4px 0px;
+    background-color: red;
 }
-/*
+
+.header_container:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
 .logo {
     float: left;
-}*/
+}
 
 .logo img{
     width: 90px;
@@ -61,4 +69,12 @@ header {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     margin-top: -0.5%;
+}
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
 }
