@@ -1,0 +1,120 @@
+/* ISO */
+
+#iso {
+    background-color: #0099cb;
+    padding: 5px 0px;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.IsoEffect {
+    margin-top: -25px;
+}
+
+#iso p {
+    font-family: "roboto", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 0px;
+    transform: translateX(11%);
+}
+
+.social_media {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    margin-right: 15%;
+}
+
+.social_media a {
+    padding: 0px;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Navbar-header */
+
+.fixed-top {
+    overflow: hidden;
+}
+
+nav {
+    background-color: white;
+    display: block;
+    margin-top: 32px;
+    transition: all 0.3s ease-out;
+}
+
+.navEffect {
+    margin-top: 0px;
+    box-shadow: 0px 1px 13px 0px #6f6f6f;
+}
+
+nav:after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.logo-brand img {
+    padding: 10px 0px;
+    width: 95px;
+    float: left;
+}
+
+nav .container {
+    position: relative;
+}
+
+.navigation {
+    position: absolute;
+    right: 0px;
+    transform: translateY(6%);
+}
+
+.navigation ul {
+    margin-bottom: 0px;
+}
+
+.navigation ul li {
+    display: inline-block;
+    line-height: 53px;
+    padding: 0px 15px;
+}
+
+.navigation ul li a {
+    text-decoration: none !important;
+    color: #292929 !important;
+    font-size: 21px;
+}
+
+
+@media only screen and (min-width:500px) and (max-width:990px) {
+    #iso p{
+        transform: translateX(25%);
+    }
+}
+
+
+@media only screen and (min-width:280px) and (max-width:500px) {
+
+    /* iso fix */
+    #iso {
+        padding: 2px 0px;
+    }
+    #iso p {
+        font-size: 11px;
+    }
+
+    .social_media a {
+        font-size: 15px;
+        margin-right: 10px;
+        margin-right: 4px;
+    }
+}
