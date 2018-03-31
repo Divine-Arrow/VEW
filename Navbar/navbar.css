@@ -124,7 +124,7 @@ nav .container {
 .menu {
     width: 40px;
     position: absolute;
-    right: 0px;
+    right: 15px;
     top: 16px;
     cursor: pointer;
     z-index: 100;
@@ -218,5 +218,9 @@ nav .container {
         font-size: 15px;
         margin-right: 10px;
         margin-right: 4px;
+    }
+    /* nav margin fix */
+    nav {
+        margin-top: 20px;
     }
 }
