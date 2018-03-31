@@ -54,6 +54,8 @@ nav {
 .navEffect {
     margin-top: 0px;
     box-shadow: 0px 1px 13px 0px #6f6f6f;
+    background-color: #4494eb;
+    background-color: #4285f4;
 }
 
 nav:after {
@@ -66,16 +68,26 @@ nav:after {
     padding: 10px 0px;
     width: 95px;
     float: left;
+    transition: all 0.3s ease-out;
+}
+
+.imgEffect {
+    filter: brightness(0) invert(1);
 }
 
 nav .container {
     position: relative;
+    transition: all 0.3s;
+}
+
+.allWidth {
+    max-width: 95%;
 }
 
 .navigation {
     position: absolute;
     right: 0px;
-    transform: translateY(6%);
+    transform: translateY(0px);
 }
 
 .navigation ul {
@@ -86,18 +98,108 @@ nav .container {
     display: inline-block;
     line-height: 53px;
     padding: 0px 15px;
+    transition: all 0.3s ease;
 }
 
 .navigation ul li a {
     text-decoration: none !important;
-    color: #292929 !important;
+    color: #292929;
     font-size: 21px;
+    transition: all 0.3s ease;
+}
+
+.navigation ul li:hover {
+    background-color: #136dcf;
+    color: #ffffff;
+}
+
+.navigation ul li:hover > a {
+    color: #ffffff !important;
+}
+
+/* menu */
+
+/* = = =  Menu = = = */
+
+.menu {
+    width: 40px;
+    position: absolute;
+    right: 0px;
+    top: 16px;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.noSelect {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.menu span {
+    width: 100%;
+    height: 4px;
+    display: block;
+    background-color: #4285f4;
+    margin: 0px;
+    border-radius: 5px;
+    transition: all 0.35s;
+}
+
+.menu span:nth-child(2) {
+    width: 60%;
+    margin: 6px 0px;
+    transition: all 0.45s cubic-bezier(0.58, -1, 0.25, 1);
+}
+
+.menu span:last-child {
+    width: 85%;
+    margin: 6px 0px;
+    transition: all 0.35s;
+}
+
+.menu:hover span:nth-child(2) {
+    width: 100%;
+}
+
+.menu:hover span:last-child {
+    width: 100%;
+}
+
+.activeMenu span:first-child {
+    transform: translate(0%, 260%) rotate(40deg);
+    width: 100%;
+}
+
+.activeMenu span:nth-child(2) {
+    opacity: 0;
+    margin-left: 120%;
+    width: 100%;
+}
+
+.activeMenu span:last-child {
+    transform: translate(0%, -260%) rotate(-40deg);
+    width: 100%;
+}
+
+.activeMenu:hover span:last-child {
+    width: 100%;
 }
 
 
+
 @media only screen and (min-width:500px) and (max-width:990px) {
-    #iso p{
+    #iso p {
         transform: translateX(25%);
+    }
+}
+
+@media only screen and (min-width:280px) and (max-width:990px) {
+    .navigation ul {
+        visibility: hidden;
+    }
+    .menu {
+        display: block;
     }
 }
 

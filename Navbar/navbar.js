@@ -2,8 +2,12 @@ var navISO = document.querySelector("#iso");
 var navTarget = document.querySelector("nav");
 var logo = document.querySelector(".logo-brand img");
 var navigation = document.querySelector(".navigation");
+var nav = document.querySelector("nav .container");
+var logo = document.querySelector(".logo-brand img");
+var navText = document.querySelectorAll(".navigation ul li a");
+var menu = document.querySelectorAll(".menu span");
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     if (scrollY < 15) {
         navISO.classList.remove("IsoEffect");
         navTarget.classList.remove("navEffect");
@@ -11,14 +15,32 @@ window.addEventListener("scroll", function() {
         logo.style.padding = "10px 0px";
         /* nav margin remove */
         navigation.style.marginTop = "0px";
+        nav.classList.remove("allWidth");
+        logo.classList.remove("imgEffect");
+
+        for (var i = 0; i < navText.length; i++) {
+            navText[i].style.color = '#292929';
+        }
+
+        /* menu span color */
+        for (var i = 0; i < menu.length; i++) {
+            menu[i].style.backgroundColor = "#4285f4";
+        }
+        
     } else if (scrollY > 15) {
         navISO.classList.add("IsoEffect");
         navTarget.classList.add("navEffect");
         /* decreasing logo padding */
         logo.style.padding = "6px 0px";
         /* nav margin add */
-        navigation.style.marginTop = "-4px";
+        navigation.style.marginTop = "-2px";
+        nav.classList.add("allWidth");
+        logo.classList.add("imgEffect");
+        for (var i = 0; i < navText.length; i++) {
+            navText[i].style.color = "#fff";
+        }
+        for (var i = 0; i < menu.length; i++) {
+            menu[i].style.backgroundColor = "#fff";
+        }
     }
 });
-
-
