@@ -87,7 +87,7 @@ nav .container {
 .navigation {
     position: absolute;
     right: 0px;
-    transform: translateY(0px);
+    transform: translateY(3px);
 }
 
 .navigation ul {
