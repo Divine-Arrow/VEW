@@ -17,6 +17,7 @@
     text-align: center;
     color: white;
     font-size: 15px;
+    margin-bottom: 0px;
 }
 
 .social_media {
@@ -28,6 +29,7 @@
 }
 
 .social_media a {
+    padding: 0px;
     color: white;
     background-color: transparent;
     font-size: 20px;
@@ -114,7 +116,7 @@ nav ul li a {
 }
 
 #coustom_product_category > .container > .row > .col-lg-4 {
-    padding: 20px 0px;
+    margin: 32px 0px;
 }
 
 #coustom_product_category {
@@ -124,12 +126,31 @@ nav ul li a {
 .coustom-product-img {
     border-bottom: 1px solid #d4d4d4;
     text-align: center;
+    transition: all 0.3s;
+    z-index: 1 !important;
+    position: relative;
+}
+
+
+
+.cont {
+    overflow: hidden;
+    width: 322px;
+    position: relative;
+    padding-bottom: 29px;
+    box-shadow: 0px -1px 11px 1px rgba(41, 40, 40, 0.2);
+}
+
+.cont:hover img {
+    transform: scale(1.15);
+    background-color: red;
+    filter: brightness(0.5);
+
 }
 
 .coustom-product-img ~ p {
-    font-family: 25px;
+    font-size: 20px;
     text-align: center;
-    text-transform: uppercase;
     font-family: "roboto", sans-serif;
     font-weight: 500;
     background-color: #4494eb;
@@ -137,20 +158,141 @@ nav ul li a {
     width: 322px;
     display: block;
     margin: auto;
-    padding: 2px 0px;
+    z-index: 100 !important;
+    position: absolute;
+    text-transform: capitalize;
+}
+
+.effect {
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.cont:hover .effect {
+    left: 0px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.effect i {
+    border: 5px solid white;
+    border-right: 0px;
+    border-left: 0px;
+    overflow: hidden;
+    padding: 0px 0px;
+    width: 135px;
+    border-radius: 4px;
+    font-size: 35px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    color: #ffffff;
+    background-color: #ff5d5d;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.effect p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 29px;
+    text-align: center;
+    margin-top: 60px;
+    color: white;
+    background-color: rgba(40, 40, 40, 0.85);
+    padding: 0px 0px;
+    text-transform: capitalize;
+    border: 2px solid #56a5fc;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.coustom-par-fix > .effect > p {
+    font-size: 25px;
+    line-height: 26px;
+    padding: 5px 0px;
 }
 
 
+.coustom-par-fix p {
+    font-size: 16px;
+}
 
-/* media query */
-/*
-@media only screen and (min-width:992px) and (max-width:1200px) {
-    
-    .coustom_product_category > .container {
-        width: 90%;
+.effect i:before {
+    box-sizing: border-box;
+    margin-left: -42px;
+    transition: all 0.3s ease-out;
+}
+
+.effect i:after {
+    content: 'See More';
+    color: white;
+    display: inline-block;
+    position: absolute;
+    font-size: 24px;
+    width: 160px;
+    text-align: center;
+    line-height: 34px;
+    font-family: 'roboto', sans-serif;
+    font-weight: 500;
+    margin-left: 0px;
+    transition: all 0.3s;
+
+}
+
+.effect i:hover:before {
+    margin-left: 55px;
+}
+
+.effect i:hover:after {
+    margin-left: 35px;
+}
+
+
+/* resposive */
+
+@media only screen and (min-width:990px) and (max-width:1200px) {
+    /* .container width to prefent mix up */
+    #coustom_product_category .container {
+        max-width: 100%;
+        width: 100%;
     }
-    
+}
+
+@media only screen and (min-width:280px) and (max-width:500px) {
+
+    /* iso fix */
+    #iso {
+        padding: 2px 0px;
+    }
+    #iso p {
+        font-size: 11px;
+    }
+
+    .social_media a {
+        font-size: 15px;
+        margin-right: 10px;
+        margin-right: 4px;
+    }
+
+
+    /* creating space */
+    #coustom_product_category {
+        padding-top: 25px;
+    }
+
+    /* product whell margin to be decereased */
     #coustom_product_category > .container > .row > .col-lg-4 {
-        margin: 0px 2px;
+        margin: 10px 0px;
     }
-}*/
+
+    .coustom-par-fix p {
+        padding: 2px 0px;
+    }
+}
