@@ -8,7 +8,7 @@ var navText = document.querySelectorAll(".navigation ul li a");
 var menu = document.querySelectorAll(".menu span");
 
 window.addEventListener("scroll", function () {
-    if (scrollY < 15) {
+    if (scrollY < 40) {
         navISO.classList.remove("IsoEffect");
         navTarget.classList.remove("navEffect");
         /* increasing logo padding */
@@ -27,7 +27,7 @@ window.addEventListener("scroll", function () {
             menu[i].style.backgroundColor = "#4285f4";
         }
         
-    } else if (scrollY > 15) {
+    } else if (scrollY > 40) {
         navISO.classList.add("IsoEffect");
         navTarget.classList.add("navEffect");
         /* decreasing logo padding */

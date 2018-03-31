@@ -5,7 +5,19 @@
     tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
+/* banner */
 
+.carousel {
+    position: relative;
+    top: 0px;
+    padding-top: 93px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    right: 0;
+    top: 75px;
+}
 
 
 
@@ -32,6 +44,7 @@
 }
 
 
+/* product shell */
 
 .cont {
     overflow: hidden;
@@ -168,6 +181,11 @@
 }
 
 @media only screen and (min-width:280px) and (max-width:500px) {
+
+    /* banner */
+    .carousel {
+        padding-top: 76.68px;
+    }
 
     /* creating space */
     #coustom_product_category {

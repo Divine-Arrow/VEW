@@ -195,11 +195,20 @@ nav .container {
 }
 
 @media only screen and (min-width:280px) and (max-width:990px) {
+
+    /* nav */
     .navigation ul {
         visibility: hidden;
     }
+
+    .logo-brand img {
+        width: 85px;
+    }
+
+    /* menu */
     .menu {
         display: block;
+        top: 14px;
     }
 }
 
