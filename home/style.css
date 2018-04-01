@@ -13,13 +13,6 @@
     padding-top: 93px;
 }
 
-.carousel-item img {
-    text-align: center;
-    vertical-align: middle;
-    width: 143%!important;
-    margin-left: -22%;
-}
-
 .carousel-control-prev,
 .carousel-control-next {
     right: 0;
@@ -222,6 +215,10 @@
     /* banner */
     .carousel {
         padding-top: 76.68px;
+    }
+    .carousel-item img {
+        width: 152%!important;
+        margin-left: -27%;
     }
 
     /* creating space */
