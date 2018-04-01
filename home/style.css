@@ -19,6 +19,44 @@
     top: 75px;
 }
 
+/* services */
+
+#service {
+    background-image: url(../assets/slics/services-background-iamges.jpg);
+    position: relative;
+    padding: 20px 0px;
+}
+
+#service img {
+    /*width: 250px;*/
+    width: 100%;
+}
+
+.coustom-service-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.service-our {
+    color: black;
+}
+
+.service-service {
+    color: #3787dc;
+}
+
+.coustom-service-content p {
+    font-size: 15px;
+    line-height: 23px;
+    padding: 10px 68px;
+    font-family: 'montserrat', sans-serif;
+    color: #292929;
+    margin-bottom: 0px;
+}
+
 
 
 /* product category */
@@ -32,8 +70,6 @@
     font-weight: 500;
     position: relative;
 }
-
-/* solid line */
 
 .product-header .fa-circle {
     font-size: 12px;
@@ -49,11 +85,21 @@
     top: -7px;
 }
 
+.product-header .left::before,
+.product-header .right::after {
+    content: ' ';
+    width: 23px;
+    height: 3px;
+    background-color: #cf8814;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-left: -67px;
+}
 
-
-/*#coustom_product_category > .container > .row {
-    padding: 3% 0px 3% 0px;
-}*/
+.product-header .right::after {
+    margin-left: 40px;
+}
 
 #coustom_product_category > .container > .row > .col-lg-4 {
     margin: 32px 0px;
@@ -97,7 +143,7 @@
     font-weight: 500;
     background-color: #4494eb;
     color: white;
-    width: 322px;
+    width: 100%;
     display: block;
     margin: auto;
     z-index: 100 !important;
@@ -210,6 +256,24 @@
     }
 }
 
+@media only screen and (min-width:500px) and (max-width:990px) {
+
+    /* services */
+    #service {
+        padding: 100px 0px;
+    }
+
+    .coustom-service-content p {
+        padding: 10px 0px;
+        font-size: 14px;
+    }
+
+    .service_img {
+        display: none;
+    }
+
+}
+
 @media only screen and (min-width:280px) and (max-width:500px) {
 
     /* banner */
@@ -224,6 +288,22 @@
     .carousel ol {
         display: none;
     }
+    
+    /* services */
+    
+    #service {
+        padding: 70px 0px;
+    }
+
+    .coustom-service-content p {
+        padding: 6px 39px;
+    font-size: 8px;
+    line-height: 12px;
+    }
+    
+    .service_img {
+        display: none;
+    }
 
     /* creating space */
     #coustom_product_category {
@@ -236,7 +316,7 @@
 
     /* product whell margin to be decereased */
     #coustom_product_category > .container > .row > .col-lg-4 {
-        margin: 10px 0px;
+        margin: 13px 0px;
     }
 
     .coustom-par-fix p {
