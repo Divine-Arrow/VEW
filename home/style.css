@@ -220,6 +220,10 @@
         width: 152%!important;
         margin-left: -27%;
     }
+    
+    .carousel ol {
+        display: none;
+    }
 
     /* creating space */
     #coustom_product_category {
