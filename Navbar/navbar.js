@@ -54,3 +54,32 @@ window.addEventListener("scroll", function () {
         }
     }
 });
+
+
+
+
+/* navbar menu buttob */
+
+var clicked = true;
+var menuButton = document.querySelector(".menu");
+var navigationBar = document.querySelector(".navigation");
+var menuSpan = document.querySelectorAll(".menu span");
+
+
+var showNav = function() {
+    if(clicked) {
+        navigationBar.classList.toggle("showNav");
+    }
+    for(var i=0; i<menuSpan.length; i++) {
+        menuSpan[i].classList.toggle("menuColor");
+    }
+    !clicked;
+}
+
+
+menuButton.addEventListener("click", showNav);
+
+
+
+
+

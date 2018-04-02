@@ -10,6 +10,11 @@ fotter {
     color: white;
 }
 
+fotter p::selection, fotter a::selection {
+    background-color: #ffffff;
+    color: #151515;
+}
+
 fotter .row a {
     color: white;
 }
@@ -22,6 +27,10 @@ fotter .row a {
     margin-bottom: 0px;
     text-decoration: none;
     padding: 0px 4px;
+}
+
+.contactmail span {
+    display: none;
 }
 
 .contactmail,
@@ -48,6 +57,7 @@ fotter .row a {
     padding: 10px 0px;
 }
 
+
 .contactmail a:after {
     content: ' ';
     height: 2px;
@@ -64,8 +74,11 @@ fotter .row a {
 
 @media only screen and (min-width: 280px) and (max-width:600px) {
     /* remove | */
-    .contactmail:first-child p:not(:first-child){
+    .contactmail:first-child p:not(:first-child) {
         display: none;
+    }
+    .contactmail span {
+        display: inline-block;
     }
     .contactmail p,
     .contactmail a,
