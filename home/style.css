@@ -140,7 +140,7 @@
 }
 
 .coustom-product-img ~ p {
-    font-size: 20px;
+    font-size: 23px;
     text-align: center;
     font-family: "roboto", sans-serif;
     font-weight: 500;
@@ -151,8 +151,8 @@
     margin: auto;
     z-index: 100 !important;
     position: absolute;
+    bottom: 0px;
     text-transform: capitalize;
-    padding-bottom: 10px;
 }
 
 .effect {

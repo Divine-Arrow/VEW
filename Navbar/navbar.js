@@ -4,6 +4,7 @@ var logo = document.querySelector(".logo-brand img");
 var navigation = document.querySelector(".navigation");
 var nav = document.querySelector("nav .container");
 var logo = document.querySelector(".logo-brand img");
+var hoverNav = document.querySelectorAll(".navigation ul li");
 var navText = document.querySelectorAll(".navigation ul li a");
 var menu = document.querySelectorAll(".menu span");
 
@@ -21,7 +22,7 @@ window.addEventListener("scroll", function () {
         for (var i = 0; i < navText.length; i++) {
             navText[i].style.color = '#292929';
         }
-
+        
         /* menu span color */
         for (var i = 0; i < menu.length; i++) {
             menu[i].style.backgroundColor = "#4285f4";
@@ -33,7 +34,7 @@ window.addEventListener("scroll", function () {
         /* decreasing logo padding */
         logo.style.padding = "6px 0px";
         /* nav margin add */
-        navigation.style.marginTop = "-2px";
+        navigation.style.marginTop = "-5px";
         nav.classList.add("allWidth");
         logo.classList.add("imgEffect");
         for (var i = 0; i < navText.length; i++) {
@@ -41,6 +42,15 @@ window.addEventListener("scroll", function () {
         }
         for (var i = 0; i < menu.length; i++) {
             menu[i].style.backgroundColor = "#fff";
+        }
+        /* nav hover color */
+        for (var i = 0; i < hoverNav.length; i++) {
+            hoverNav[i].addEventListener('mouseover', function() {
+                this.style.backgroundColor = "#2984e7";
+            });
+            hoverNav[i].addEventListener('mouseout', function() {
+                this.style.backgroundColor = "transparent";
+            });
         }
     }
 });
