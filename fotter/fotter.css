@@ -14,7 +14,9 @@ fotter .row a {
     color: white;
 }
 
-.contactmail p, .contactmail a, .contact-number p{
+.contactmail p,
+.contactmail a,
+.contact-number p {
     display: inline-block;
     font-size: 19px;
     margin-bottom: 0px;
@@ -22,7 +24,8 @@ fotter .row a {
     padding: 0px 4px;
 }
 
-.contactmail, .contact-number {
+.contactmail,
+.contact-number {
     text-align: center;
     margin: 0px;
     padding: 25px 0px 14px 0px;
@@ -30,11 +33,9 @@ fotter .row a {
     border-width: 0px 0px 1.5px 0px;
 }
 
-.contactmail:nth-child(2){
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+.contactmail:nth-child(2) {
+    padding: 10px 0px;
+    margin: 0px;
 }
 
 .contact-number {
@@ -42,7 +43,7 @@ fotter .row a {
     border: none;
 }
 
-.contact-number p  {
+.contact-number p {
     margin: 0px;
     padding: 10px 0px;
 }
@@ -59,4 +60,26 @@ fotter .row a {
 
 .contactmail a:hover:after {
     background: #ff2525;
+}
+
+@media only screen and (min-width: 280px) and (max-width:600px) {
+    /* remove | */
+    .contactmail:first-child p:not(:first-child){
+        display: none;
+    }
+    .contactmail p,
+    .contactmail a,
+    .contact-number p {
+        font-size: 15px;
+        padding: 0px 0px;
+    }
+    .contactmail:nth-child(2) {
+        padding: 5px 0px;
+    }
+    .contact-number {
+        padding: 3px 0px;
+    }
+    .contact-number p {
+        padding: 0px 0px;
+    }
 }
