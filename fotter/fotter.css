@@ -1,0 +1,16 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+fotter {
+    display: block;
+    background: url('images/fotter_Backgroud.jpg') no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+fotter .row a {
+    color: white;
+}
+
