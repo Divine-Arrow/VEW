@@ -4,6 +4,7 @@
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     tap-highlight-color: rgba(255, 255, 255, 0);
 }
+
 /* banner */
 
 .carousel {
@@ -50,6 +51,86 @@
 
 
 
+/* mission */
+
+#mission {
+    padding-top: 28px;
+    padding-bottom: 82px;
+    background-image: url(../assets/slics/our-mission-background-image.png);
+    background-repeat: no-repeat;
+}
+
+.custom-mission-p {
+    font-size: 15px;
+    line-height: 25px;
+    color: white;
+    padding: 0px 220px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.custom-servic-mission-h {
+    color: white;
+    font-size: 28px;
+}
+
+.first {
+    margin-right: 4px;
+    margin-bottom: 6px;
+    height: 3px;
+    width: 31px;
+    border-radius: 10px;
+    background-color: #d18815;
+}
+
+.second {
+    margin-right: 4px;
+    margin-bottom: 4px;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: #d18815;
+}
+
+.third {
+    margin-right: 4px;
+    margin-bottom: 3px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #d18815;
+}
+
+.first-back {
+    margin-left: 4px;
+    margin-bottom: 3px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #d18815;
+}
+
+.second-back {
+    margin-left: 4px;
+    margin-bottom: 4px;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: #d18815;
+}
+
+.third-back {
+    margin-left: 4px;
+    margin-bottom: 6px;
+    height: 3px;
+    width: 31px;
+    border-radius: 10px;
+    background-color: #d18815;
+}
+
+#mission .bg {
+    background-color: white;
+}
+
 /* product category */
 
 /* heading */
@@ -62,6 +143,8 @@
     position: relative;
     color: #414141;
 }
+
+
 
 
 /*.service-our {
@@ -247,6 +330,116 @@
     margin-left: 35px;
 }
 
+/*--about--*/
+
+.custom-about {
+    margin-top: 50px;
+}
+
+.custom-about-contact-col {
+    height: 320px;
+    border: 2px solid #ecebeb;
+    background-color: #f7f7f7;
+}
+
+.custom-effect3 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.custom-effect3:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 11px;
+    left: 19px;
+    width: 54%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.custom-about img {
+    width: 100%;
+}
+
+.custom-about-p {
+    font-size: 15px;
+    padding: 15px 50px;
+}
+
+form {
+    padding-top: 30px;
+}
+
+.custom-effect4 {
+    position: relative;
+}
+
+.custom-effect4:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 30px;
+    right: 20px;
+    left: auto;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.custom-form1 {
+    width: 88%;
+    padding-left: 38px;
+    margin-left: 25px;
+}
+
+.custom-form2 {
+    width: 86%;
+    padding-left: 38px;
+    margin-left: 12px;
+}
+
+.custom-pos1 {
+    top: 27%;
+    left: 15%;
+    font-size: 22px;
+
+}
+
+.custom-pos2 {
+    top: 27%;
+    left: 11%;
+}
+
+.custom-textarea {
+    width: 90%;
+    margin-left: 28px;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+}
+
+
 
 /* resposive */
 
@@ -273,6 +466,48 @@
         display: none;
     }
 
+    /* mission */
+    #mission {
+        padding-bottom: 0px;
+        background-image: linear-gradient(to right bottom, rgb(58, 133, 215), rgba(12, 53, 72, 0.8)), url('images/mission.jpg');
+        background-repeat: no-repeat;
+    }
+    .custom-mission-p {
+        padding: 4px 2%;
+    }
+    .custom-servic-mission-h {
+        font-size: 24px;
+    }
+    .custom-pos1 {
+        left: 18%;
+    }
+    .custom-pos2 {
+        left: 16%;
+    }
+
+}
+
+/*--only for forms--*/
+@media only screen and (min-width:574px) and (max-width:767px) {
+    .custom-width {
+        max-width: 640px;
+    }
+    .custom-about-p {
+        padding: 15px 34px;
+    }
+    .custom-form1 {
+        width: 90%;
+        padding-left: 29px;
+        margin-left: 16px;
+    }
+    .custom-textarea {
+        margin-left: 17px;
+    }
+    .custom-form2 {
+        padding-left: 30px;
+    }
+
+
 }
 
 @media only screen and (min-width:280px) and (max-width:500px) {
@@ -297,12 +532,32 @@
 
     .coustom-service-content p {
         padding: 6px 39px;
-        font-size: 8px;
+        font-size: 9px;
         line-height: 12px;
     }
 
     #service img {
         display: none;
+    }
+
+    /* mission*/
+    #mission {
+        padding-bottom: 0px;
+        background-image: linear-gradient(to right bottom, rgb(58, 133, 215), rgba(12, 53, 72, 0.8)), url(../assets/slics/mission.jpg);
+        background-repeat: no-repeat;
+    }
+    .custom-service-col {
+        padding-top: 20px;
+    }
+    .custom-service-p {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px;
+    }
+    .custom-mission-p {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 15px 10px;
     }
 
     /* product */
@@ -344,5 +599,53 @@
 
     .coustom-par-fix p {
         padding: 2px 0px;
+    }
+
+    /*--about and contact*/
+    .custom-about {
+        margin-top: 25px;
+    }
+    .custom-about img {
+        /* width: 95%;*/
+        height: 110px;
+    }
+    .custom-about-p {
+        font-size: 15px;
+        padding-top: 16px!important;
+        padding-left: 32px!important;
+        padding: 0px;
+    }
+
+    /*contact us*/
+    .custom-form1 {
+        width: 89%;
+        padding-left: 10%;
+        margin-left: 25px;
+
+    }
+    .custom-form2 {
+        width: 89%;
+        padding-left: 10%;
+        margin-left: 25px;
+    }
+    .custom-textarea {
+        width: 88%;
+        margin-left: 27px;
+    }
+    .custom-about-contact-col {
+        /*
+        width: 92%;*/
+        border-right: 2px solid #dbdbdb;
+        height: 395px;
+    }
+    .custom-margin {
+        margin-bottom: 20px;
+    }
+    .custom-pos1,
+    custom-pos2 {
+        top: 27%;
+        left: 11%;
+        font-size: 22px;
+
     }
 }
