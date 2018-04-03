@@ -12,6 +12,7 @@ var navText = document.querySelectorAll(".navigation ul li a");
 var clicked = false;
 var menuButton = document.querySelector(".menu");
 var navigationBar = document.querySelector(".navigation");
+var navigationBackground = document.querySelector(".navigation_background");
 var menuSpan = document.querySelectorAll(".menu span");
 
 window.addEventListener("scroll", function () {
@@ -75,6 +76,7 @@ var showNav = function () {
     if (clicked) {
         /* for show */
         navigationBar.classList.toggle("showNav");
+        navigationBackground.classList.toggle("navBackActive");
         /* top restore menu cross to hamburger */
         menuButton.classList.toggle("activeMenu");
         /* menu color toggle white and normal */
@@ -84,6 +86,7 @@ var showNav = function () {
     } else {
         /* for hide */
         navigationBar.classList.toggle("showNav");
+        navigationBackground.classList.toggle("navBackActive");
         /* top restore menu cross to hamburger */
         menuButton.classList.toggle("activeMenu");
         /* menu color toggle white and normal */
