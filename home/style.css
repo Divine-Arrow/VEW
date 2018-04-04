@@ -56,8 +56,24 @@
 #mission {
     padding-top: 28px;
     padding-bottom: 82px;
-    background-image: url(../assets/slics/our-mission-background-image.png);
+    background-image: url('images/our-mission-background-image.png');
+    width: 100%;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+#mission::after {
+    content: ' ';
+    display: block;
+    width: 70px;
+    height: 70px;
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(50%);
 }
 
 .custom-mission-p {
@@ -417,6 +433,11 @@ form {
     margin-left: 12px;
 }
 
+input:focus,
+textarea:focus {
+    box-shadow: 0px 0px 1px 0px #0099cb !important;
+}
+
 .custom-pos1 {
     top: 27%;
     left: 15%;
@@ -488,6 +509,7 @@ form {
 }
 
 /*--only for forms--*/
+
 @media only screen and (min-width:574px) and (max-width:767px) {
     .custom-width {
         max-width: 640px;

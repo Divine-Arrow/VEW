@@ -108,3 +108,10 @@ var stopScroll = function () {
 
 menuButton.addEventListener("click", showNav);
 window.addEventListener("scroll", stopScroll);
+
+
+
+window.onload = function () {
+    document.querySelector(".loader_container").style.display = "none";
+    document.querySelector("body").style.overflow = "visible";
+}

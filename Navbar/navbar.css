@@ -49,15 +49,18 @@
 
 /* Navbar-header */
 
-.fixed-top {
-    overflow: hidden;
-}
-
 nav {
     background-color: white;
     display: block;
     margin-top: 32px;
     transition: all 0.3s ease-out;
+    overflow: hidden;
+    z-index: 250 !important;
+        position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 250;
 }
 
 .navEffect {
@@ -230,6 +233,9 @@ nav .container {
         width: 400px;
         height: 100vh;
         background-color: rgba(46, 145, 239, 0.97);
+        background-image: linear-gradient(to bottom right, rgba(46, 145, 239, 0.93),rgba(13, 105, 194, 0.92)), url(../home/images/mission.jpg);
+        /* jd */
+        background-image: linear-gradient(to bottom right, rgba(46, 145, 239, 0.93),rgba(34, 83, 130, 0.92)), url(../home/images/mission.jpg);
         /* siding it */
         transform: translateX(100%);
         transition: all 0.3s ease-out;
