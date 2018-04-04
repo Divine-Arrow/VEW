@@ -1,26 +1,23 @@
-body {
-    overflow: hidden;
-    /*overflow: visible;*/
-}
-
 .loader_container {
     font-family: "Roboto", sans-serif;
     font-size: 1em;
     line-height: 1.6;
-    background: #F2F1EF;
+    /*background: #F2F1EF;*/
+    background: #fff;
     height: 100vh;
     z-index: 300;
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
+    transition: all 0.6s;
 }
 
 .loader_container p {
     text-align: center;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    top: 55%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px;
@@ -31,12 +28,12 @@ body {
     top: 35%;
     font-size: 30px;
     font-family: 'montserrat', sans-serif;
-    color: #369fe6;
+    color: #161616;
 }
 
 .loader {
-    margin-top: -15px;
-    margin-left: -15px;
+    margin-top: -10px;
+    margin-left: -37px;
     font-size: 18px;
     position: absolute;
     top: 50%;

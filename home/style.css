@@ -55,25 +55,26 @@
 
 #mission {
     padding-top: 28px;
-    padding-bottom: 82px;
+    padding-bottom: 63px;
     background-image: url('images/our-mission-background-image.png');
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
+    background-color: #e8f5fa;
 }
 
 #mission::after {
     content: ' ';
     display: block;
     width: 70px;
-    height: 70px;
+    height: 40px;
     -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
     clip-path: polygon(0 0, 50% 100%, 100% 0);
-    background-color: red;
+    background-color: #cd8411;
     position: absolute;
     bottom: 0px;
     left: 50%;
-    transform: translateX(50%);
+    transform: translateX(-50%);
 }
 
 .custom-mission-p {
@@ -553,9 +554,9 @@ textarea:focus {
     }
 
     .coustom-service-content p {
-        padding: 6px 39px;
-        font-size: 9px;
-        line-height: 12px;
+            padding: 6px 20px;
+    font-size: 10px;
+    line-height: 12px;
     }
 
     #service img {

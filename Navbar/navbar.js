@@ -108,20 +108,19 @@ var stopScroll = function () {
 
 /* loader animation removal */
 var loader = function () {
-    document.querySelector(".loader_container").style.display = "none";
-    document.querySelector("body").style.overflow = "visible";
+    document.querySelector(".loader_container").style.top = "-100vh";
+    clicked = !clicked;
+    stopScroll;
 }
 
 menuButton.addEventListener("click", showNav);
 window.addEventListener("scroll", stopScroll);
 window.addEventListener("onload", loader);
 
-window.onload = setTimeout(loader, 2000);
-
-
-/*
-window.onload = function () {
-    document.querySelector(".loader_container").style.display = "none";
-    document.querySelector("body").style.overflow = "visible";
+window.onload = function() {
+    xAxis = scrollX;
+    yAxis = scrollY;
+    clicked = !clicked;
+    window.addEventListener("scroll", stopScroll);
+    setTimeout(loader, 2000);   
 }
-*/
