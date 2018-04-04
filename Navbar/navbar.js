@@ -115,8 +115,8 @@ var loader = function () {
 menuButton.addEventListener("click", showNav);
 window.addEventListener("scroll", stopScroll);
 window.addEventListener("onload", loader);
-/*window.onload = loader;*/
-window.setTimeout(loader, 2000)
+
+window.onload = setTimeout(loader, 2000);
 
 
 /*
