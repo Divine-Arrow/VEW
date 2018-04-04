@@ -16,6 +16,24 @@ body {
     right: 0px;
 }
 
+.loader_container p {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #151515;
+}
+
+.loader_container p:first-child {
+    top: 35%;
+    font-size: 30px;
+    font-family: 'montserrat', sans-serif;
+    color: #369fe6;
+}
+
 .loader {
     margin-top: -15px;
     margin-left: -15px;

@@ -106,12 +106,22 @@ var stopScroll = function () {
     }
 }
 
+/* loader animation removal */
+var loader = function () {
+    document.querySelector(".loader_container").style.display = "none";
+    document.querySelector("body").style.overflow = "visible";
+}
+
 menuButton.addEventListener("click", showNav);
 window.addEventListener("scroll", stopScroll);
+window.addEventListener("onload", loader);
+/*window.onload = loader;*/
+window.setTimeout(loader, 2000)
 
 
-
+/*
 window.onload = function () {
     document.querySelector(".loader_container").style.display = "none";
     document.querySelector("body").style.overflow = "visible";
 }
+*/
