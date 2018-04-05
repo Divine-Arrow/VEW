@@ -74,6 +74,7 @@ window.addEventListener("scroll", function () {
 var showNav = function () {
     clicked = !clicked;
     if (clicked) {
+        window.addEventListener("scroll", stopScroll);
         /* for show */
         navigationBar.classList.toggle("showNav");
         navigationBackground.classList.toggle("navBackActive");
@@ -84,6 +85,7 @@ var showNav = function () {
             menuSpan[i].classList.toggle("menuColor");
         }
     } else {
+        window.removeEventListener("scroll", stopScroll);
         /* for hide */
         navigationBar.classList.toggle("showNav");
         navigationBackground.classList.toggle("navBackActive");
@@ -101,26 +103,38 @@ var showNav = function () {
 }
 
 var stopScroll = function () {
-    if (clicked) {
-        window.scroll(xAxis, yAxis);
-    }
+    window.scroll(xAxis, yAxis);
 }
 
 /* loader animation removal */
 var loader = function () {
     document.querySelector(".loader_container").style.top = "-100vh";
     clicked = !clicked;
-    stopScroll;
+    window.removeEventListener("scroll", stopScroll);
 }
 
-menuButton.addEventListener("click", showNav);
-window.addEventListener("scroll", stopScroll);
-window.addEventListener("onload", loader);
-
-window.onload = function() {
-    xAxis = scrollX;
-    yAxis = scrollY;
+/* loader listener */
+window.addEventListener("load", function () {
+    xAxis = 0;
+    yAxis = 0;
     clicked = !clicked;
     window.addEventListener("scroll", stopScroll);
-    setTimeout(loader, 2000);   
-}
+    setTimeout(loader, 2500);
+});
+
+/* menu listener */
+menuButton.addEventListener("click", showNav);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
