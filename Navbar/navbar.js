@@ -103,17 +103,18 @@ var showNav = function () {
 }
 
 var stopScroll = function () {
-    window.scroll(xAxis, yAxis);
+    /*window.scroll(xAxis, yAxis);*/
 }
 
 /* loader animation removal */
 var loader = function () {
     document.querySelector(".loader_container").style.top = "-100vh";
+    document.querySelector(".loader_container").style.opacity = "0.5";
     clicked = !clicked;
     window.removeEventListener("scroll", stopScroll);
 }
 
-/* loader listener */
+/* loader listener 
 window.addEventListener("load", function () {
     xAxis = 0;
     yAxis = 0;
@@ -121,20 +122,14 @@ window.addEventListener("load", function () {
     window.addEventListener("scroll", stopScroll);
     setTimeout(loader, 2500);
 });
-
+*/
 /* menu listener */
 menuButton.addEventListener("click", showNav);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+for (var i = 0; i < navText; i++) {
+    navText.addEventListener("click", function () {
+        console.log("clicked");
+    });
+}
+*/
