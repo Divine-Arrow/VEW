@@ -33,8 +33,32 @@ h1 {
 
 /* table */
 
+/*.overflowed {
+    overflow-x:auto;
+}*/
+
 #table {
     margin-top: 50px;
+    font-size: 17px;
+}
+
+table {
+    display: block;
+    margin: auto !important;
+}
+
+.table td,
+.table th {
+    text-align: center;
+    border: 1px solid rgba(44, 43, 45, 0.17);
+}
+
+thead td {
+    border-color: rgba(160, 160, 160, 0.14) !important;
+}
+
+.space-fixer {
+    padding: 2px 4px !important;
 }
 
 table p {
@@ -51,6 +75,10 @@ table p {
     text-align: center;
 }
 
+.short-p {
+        display: none;
+    }
+
 .table td,
 .table th {
     vertical-align: middle;
@@ -63,3 +91,47 @@ table p {
 }
 
 
+@media only screen and (min-width:750px) and (max-width:1000px) {
+
+    #table .container {
+        max-width: 100%;
+    }
+    table {
+        font-size: 14px;
+    }
+
+    .coustom-fix {
+        font-weight: 500;
+    }
+
+    .table td,
+    .table th {
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:750px) {
+
+    #table .container {
+        max-width: 100%;
+    }
+    table {
+        font-size: 10px;
+    }
+
+    .table td,
+    .table th {
+        padding: 3px;
+    }
+
+    .coustom-fix {
+        font-weight: 200;
+    }
+    
+    .long-p {
+        display: none;
+    }
+    .short-p {
+        display: block;
+    }
+}

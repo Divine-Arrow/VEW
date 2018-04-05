@@ -114,7 +114,7 @@ var loader = function () {
     window.removeEventListener("scroll", stopScroll);
 }
 
-/* loader listener 
+/* loader listener */
 window.addEventListener("load", function () {
     xAxis = 0;
     yAxis = 0;
@@ -122,7 +122,7 @@ window.addEventListener("load", function () {
     window.addEventListener("scroll", stopScroll);
     setTimeout(loader, 2500);
 });
-*/
+
 /* menu listener */
 menuButton.addEventListener("click", showNav);
 
