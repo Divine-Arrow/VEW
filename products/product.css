@@ -39,30 +39,43 @@ h1 {
 #product p {
     margin-top: 15px;
     font-size: 18px;
-    font-family: 'roboto', sans-serif;
+    font-family: sans-serif;
 }
 
 /* Enquiry */
+
+.information {
+    position: relative;
+}
 .enquiry {
-    position: fixed;
-    top: 30%;
-    right: 3%;
-    z-index: 1000;
+    position: absolute;
+    top: 6px;
+    right: 0px;    
+}
+
+#table .enquiry {
+    position: inherit;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 25px;
 }
 
 .enquiry a {
-    padding: 2px 5px;
-    background-color: red;
+    padding: 6px 10px;
+    background-color: green;
     color: white;
     text-decoration: none;
     border: none;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'roboto', sans-serif;
+    font-size: 18px;
+    border-radius: 1px;
+    text-transform: uppercase;
 }
 
 /* table */
-
-/*.overflowed {
-    overflow-x:auto;
-}*/
 
 #table {
     padding: 60px 0px;
