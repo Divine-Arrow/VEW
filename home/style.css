@@ -11,7 +11,6 @@
 .carousel {
     position: relative;
     top: 0px;
-    padding-top: 93px;
 }
 
 .carousel-control-prev,
@@ -543,9 +542,6 @@ textarea:focus {
 @media only screen and (min-width:280px) and (max-width:500px) {
 
     /* banner */
-    .carousel {
-        padding-top: 76.68px;
-    }
     .carousel-item img {
         width: 152%!important;
         margin-left: -27%;

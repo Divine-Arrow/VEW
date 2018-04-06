@@ -120,8 +120,7 @@ window.addEventListener("load", function () {
     yAxis = 0;
     clicked = !clicked;
     window.addEventListener("scroll", stopScroll);
-    /*setTimeout(loader, 2500);*/
-    setTimeout(loader,0);
+    loader();
 });
 
 /* menu listener */

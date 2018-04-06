@@ -1,3 +1,21 @@
+body {
+    padding-top: 93px;
+}
+
+/* compatible */
+#compatible {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: none;
+}
+
+#compatible p {
+    text-align: center;
+    padding-top: 50px;
+}
+
+
 /* ISO */
 
 #iso {
@@ -287,7 +305,6 @@ nav .container {
     }
 }
 
-
 @media only screen and (min-width:280px) and (max-width:600px) {
 
     .navigation ul {
@@ -301,6 +318,11 @@ nav .container {
 
 @media only screen and (min-width:280px) and (max-width:500px) {
 
+    /* navbar */
+    body {
+        padding-top: 76px;
+    }
+    
     /* iso fix */
     #iso {
         padding: 2px 0px;
@@ -317,5 +339,22 @@ nav .container {
     /* nav margin fix */
     nav {
         margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:333px) {
+
+    body > *, fotter {
+        display: none !important;
+    }
+    
+    body {
+        display: block;
+        margin-top: 0px;
+        padding-top: 0px !important;
+    }
+    
+    #compatible {
+        display: block !important;
     }
 }
