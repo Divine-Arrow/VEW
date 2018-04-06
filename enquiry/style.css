@@ -6,3 +6,24 @@
     background-image: linear-gradient(to right bottom, rgba(125, 121, 121, 0.35), rgba(13, 8, 8, 0.75)), url("images/scenery%201.jpeg");
     background-size: cover;
 }
+
+
+/* mobiles */
+@media screen and (max-width:480px){
+    
+}
+/* landscape mobile */
+@media screen and (min-width:481px) and (max-width:767px){
+    
+}
+
+/* tablet */
+@media screen and (min-width:768px) and (max-width:1023px) { 
+    
+}
+
+/* desktop */
+@media screen and (min-width:1024px){
+    
+    
+}
