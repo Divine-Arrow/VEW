@@ -103,7 +103,7 @@ var showNav = function () {
 }
 
 var stopScroll = function () {
-    /*window.scroll(xAxis, yAxis);*/
+    window.scroll(xAxis, yAxis);
 }
 
 /* loader animation removal */
@@ -120,7 +120,8 @@ window.addEventListener("load", function () {
     yAxis = 0;
     clicked = !clicked;
     window.addEventListener("scroll", stopScroll);
-    setTimeout(loader, 2500);
+    /*setTimeout(loader, 2500);*/
+    setTimeout(loader,0);
 });
 
 /* menu listener */
