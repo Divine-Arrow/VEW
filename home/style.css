@@ -23,6 +23,9 @@
 
 #service {
     background-image: url(../assets/slics/services-background-iamges.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     padding: 20px 0px;
 }
@@ -55,26 +58,9 @@
 
 #mission {
     padding-top: 28px;
-    padding-bottom: 63px;
-    background-image: url('images/our-mission-background-image.png');
-    width: 100%;
+    padding-bottom: 82px;
+    background-image: url(../assets/slics/our-mission-background-image.png);
     background-repeat: no-repeat;
-    position: relative;
-    background-color: #e8f5fa;
-}
-
-#mission::after {
-    content: ' ';
-    display: block;
-    width: 70px;
-    height: 40px;
-    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
-    background-color: #cd8411;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .custom-mission-p {
@@ -161,11 +147,6 @@
     color: #414141;
 }
 
-
-#contact {
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-}
 
 
 
@@ -354,6 +335,10 @@
 
 /*--about--*/
 
+#contact {
+    margin-bottom: 20px;
+}
+
 .custom-about {
     margin-top: 50px;
 }
@@ -361,13 +346,12 @@
 .custom-about-contact-col {
     height: 320px;
     border: 2px solid #ecebeb;
-    background-color: #f7f7f7;
+    background-color: #ffffff;
 }
 
 .custom-effect3 {
     position: relative;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .custom-effect3:before {
@@ -401,6 +385,11 @@
 
 form {
     padding-top: 30px;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #0099cb !important;
+    box-shadow: none !important;
 }
 
 .custom-effect4 {
@@ -440,21 +429,17 @@ form {
     margin-left: 12px;
 }
 
-input:focus,
-textarea:focus {
-    box-shadow: 0px 0px 1px 0px #0099cb !important;
-}
-
 .custom-pos1 {
     top: 27%;
     left: 15%;
-    font-size: 22px;
+    font-size: 20px;
 
 }
 
 .custom-pos2 {
     top: 27%;
     left: 11%;
+    font-size: 20px;
 }
 
 .custom-textarea {
@@ -465,6 +450,9 @@ textarea:focus {
 .btn {
     color: white;
     background-color: black;
+    width: 120px;
+    font-size: 18px;
+    border-radius: 0px;
 }
 
 
@@ -476,6 +464,14 @@ textarea:focus {
     #coustom_product_category .container {
         max-width: 100%;
         width: 100%;
+    }
+}
+
+/*for icon*/
+
+@media only screen and (min-width:767px) and (max-width:990px) {
+    .custom-pos1 {
+        left: 40px !important;
     }
 }
 
@@ -507,12 +503,24 @@ textarea:focus {
         font-size: 24px;
     }
     .custom-pos1 {
-        left: 18%;
+        left: 12%;
     }
     .custom-pos2 {
-        left: 16%;
+        left: 10%;
     }
-
+    .custom-effect3 {
+        max-width: 500px !important;
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+    .custom-effect4 {
+        max-width: 500px !important;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .custom-effect4:after {
+        bottom: 8px;
+    }
 }
 
 /*--only for forms--*/
@@ -557,9 +565,9 @@ textarea:focus {
     }
 
     .coustom-service-content p {
-            padding: 6px 20px;
-    font-size: 10px;
-    line-height: 12px;
+        padding: 6px 39px;
+        font-size: 9px;
+        line-height: 12px;
     }
 
     #service img {
@@ -585,6 +593,11 @@ textarea:focus {
         line-height: 20px;
         padding: 15px 10px;
     }
+    .custom-servic-mission-h {
+        font-size: 22px;
+    }
+
+
 
     /* product */
     .product-header p {
@@ -638,7 +651,8 @@ textarea:focus {
     .custom-about-p {
         font-size: 15px;
         padding-top: 16px!important;
-        padding-left: 32px!important;
+        width: 90%;
+        margin: 0 auto;
         padding: 0px;
     }
 
@@ -662,7 +676,10 @@ textarea:focus {
         /*
         width: 92%;*/
         border-right: 2px solid #dbdbdb;
-        height: 395px;
+        height: 305px;
+    }
+    .custom-height {
+        height: 405px;
     }
     .custom-margin {
         margin-bottom: 20px;
@@ -673,5 +690,24 @@ textarea:focus {
         left: 11%;
         font-size: 22px;
 
+    }
+}
+
+/*for contact 500px*/
+
+@media only screen and (min-width:501px) and (max-width:574px) {
+    .custom-height {
+        height: 400px;
+    }
+    .custom-form2 {
+        width: 88%;
+        padding-left: 38px;
+        margin-left: 26px;
+    }
+    .custom-pos1 {
+        left: 9%;
+    }
+    .custom-pos2 {
+        left: 9%;
     }
 }

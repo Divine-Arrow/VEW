@@ -88,7 +88,8 @@ h1 {
 
 tr:hover {
     transition: all 0.15s;
-    background-color: #e6d4f8 !important;
+    /*background-color: #e6d4f8 !important;*/
+    background-color: #cbcbcb !important;
 }
 
 .head-color tr {

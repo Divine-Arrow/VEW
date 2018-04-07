@@ -125,11 +125,3 @@ window.addEventListener("load", function () {
 
 /* menu listener */
 menuButton.addEventListener("click", showNav);
-
-/*
-for (var i = 0; i < navText; i++) {
-    navText.addEventListener("click", function () {
-        console.log("clicked");
-    });
-}
-*/
