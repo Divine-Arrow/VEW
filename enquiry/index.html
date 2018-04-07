@@ -16,9 +16,8 @@
     <link rel="stylesheet" href="../Navbar/navbar.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="../fotter/fotter.css">
-    
+
     <!-- anime -->
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/demo.css">
 
 </head>
@@ -100,10 +99,8 @@
             <div class="container">
                 <form>
                     <div class="form-group">
-                        <fieldset disabled>
-                            <label for="disabledTextInput">Disabled input</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                        </fieldset>
+                        <label for="disabledTextInput">Product</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" disabled>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -137,13 +134,14 @@
                             <input type="text" class="form-control" id="inputZip" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    
+                    <!--<button type="submit" class="btn btn-primary">Sign in</button>-->
 
 
                     <!-- Button container -->
                     <div class="download-button-container">
                         <!-- The real button -->
-                        <button class="download-button">
+                        <button type="submit" class="download-button">
                             <span class="button-text-real hidden">download</span>
                             <!-- Extra elements to perform the animations -->
                             <span class="button-icon">
