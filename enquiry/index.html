@@ -13,9 +13,13 @@
     <!--<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">-->
     <!-- font awesom -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="../Navbar/navbar.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="../fotter/fotter.css">
+    
+    <!-- anime -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/demo.css">
 
 </head>
 
@@ -92,7 +96,86 @@
 
     <!-- background -->
     <section id="enquiry">
-        
+        <div class="enquiry_wrapper">
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <fieldset disabled>
+                            <label for="disabledTextInput">Disabled input</label>
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                        </fieldset>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputAddress">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">State</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputCity">Country</label>
+                            <input type="text" class="form-control" id="inputCity" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputZip" required="">Zip</label>
+                            <input type="text" class="form-control" id="inputZip" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+
+
+                    <!-- Button container -->
+                    <div class="download-button-container">
+                        <!-- The real button -->
+                        <button class="download-button">
+                            <span class="button-text-real hidden">download</span>
+                            <!-- Extra elements to perform the animations -->
+                            <span class="button-icon">
+                                <span class="button-linear-progress">
+                                    <span class="button-linear-progress-bar"></span>
+                                </span>
+                                <svg class="button-icon-svg" viewBox="0 0 60 60">
+                                    <path class="button-icon-path button-icon-path-square" d="M 20 40 l 0 -20 l 20 0 l 0 20 Z"></path>
+                                    <path class="button-icon-path button-icon-path-line" d="M 40 20 l -20 20"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <!-- Extra elements to perform the animations -->
+                        <svg class="border-svg" width="240px" height="100px" viewBox="0 0 240 100">
+                            <path class="border-path hidden" d="M 40 3.5 a 36.5 36.5 0 0 0 -36.5 36.5 a 36.5 36.5 0 0 0 36.5 36.5 C 70 76.5 90 76.5 120 76.5 S 170 76.5 200 76.5 a 36.5 36.5 0 0 0 36.5 -36.5 a 36.5 36.5 0 0 0 -36.5 -36.5 Z"></path>
+                        </svg>
+                        <span class="button-text button-text-download">download</span>
+                        <span class="button-text button-text-done">done!</span>
+                        <div class="button-wave"></div>
+                        <div class="button-progress-container">
+                            <svg class="button-svg">
+                                <path class="button-circular-progress" d="M 50 50 m 0 -32.5 a 32.5 32.5 0 0 1 0 65 a 32.5 32.5 0 0 1 0 -65"></path>
+                            </svg>
+                            <span class="button-ball"></span>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
     </section>
 
 
@@ -134,6 +217,12 @@
             </div>
         </div>
     </fotter>
+
+
+
+    <script src='js/anime.min.js'></script>
+    <script src='js/segment.min.js'></script>
+    <script src='js/demo.js'></script>
 
 
     <!-- bootstrap scripts -->

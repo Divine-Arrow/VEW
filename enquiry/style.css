@@ -1,29 +1,71 @@
+body {
+    background: url("images/one.jpg") no-repeat center;
+    background-size: cover;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid white;
+}
+
+nav ul li a {
+    color: white !important;
+    /*background-image: linear-gradient(to right bottom, rgba(125, 121, 121, 0.35), rgba(13, 8, 8, 0.75)), url("images/one.jpg");*/
+}
+
 #enquiry {
     display: block;
     height: 100vh;
     width: 100%;
     position: relative;
-    background-image: linear-gradient(to right bottom, rgba(125, 121, 121, 0.35), rgba(13, 8, 8, 0.75)), url("images/scenery%201.jpeg");
-    background-size: cover;
 }
 
+.enquiry_wrapper {
+    width: 500px;
+    padding: 20px 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: #323536;
+}
+
+.enquiry_wrapper .container {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);*/
+}
+
+label {
+    color: white;
+    font-family: 'roboto', sans-serif;
+}
+
+.required_sign:after {
+    content: " *";
+    color: white;
+}
+
+input:focus {
+    box-shadow: none !important;
+    border-color: #02d1ff !important;
+}
 
 /* mobiles */
-@media screen and (max-width:480px){
-    
-}
+
+@media screen and (max-width:480px) {}
+
 /* landscape mobile */
-@media screen and (min-width:481px) and (max-width:767px){
-    
-}
+
+@media screen and (min-width:481px) and (max-width:767px) {}
 
 /* tablet */
-@media screen and (min-width:768px) and (max-width:1023px) { 
-    
-}
+
+@media screen and (min-width:768px) and (max-width:1023px) {}
 
 /* desktop */
-@media screen and (min-width:1024px){
-    
-    
-}
+
+@media screen and (min-width:1024px) {}
