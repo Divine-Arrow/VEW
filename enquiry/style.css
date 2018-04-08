@@ -20,8 +20,13 @@ nav ul li a {
     position: relative;
 }
 
+#enquiry .container {
+    max-width: 93%;
+    padding: 5% 0px;
+}
+
 .enquiry_wrapper {
-    width: 500px;
+    width: 600px;
     padding: 20px 3px;
     position: absolute;
     top: 50%;
@@ -32,16 +37,10 @@ nav ul li a {
     background-color: #323536;
 }
 
-.enquiry_wrapper .container {
-    /*position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);*/
-}
-
 label {
-    color: white;
+    color: #f2f2f2;
     font-family: 'roboto', sans-serif;
+    margin-bottom: 0px;
 }
 
 .required_sign:after {
@@ -49,10 +48,37 @@ label {
     color: white;
 }
 
-input:focus {
-    box-shadow: none !important;
-    border-color: #02d1ff !important;
+.form-group, .form-row {
+    margin-top: 3px;
 }
+
+.form-group .form-control:focus {
+    color: #495057;
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+    border-color: #02d1ff;
+    color: white;
+}
+
+.form-group .form-control {
+    padding-left: 0px;
+    background-color: transparent;
+    border-width: 0px 0px 1px 0px;
+    border-color: #e48743;
+    -webkit-border-end-color: #43c048;
+    border-radius: 0px;
+    color: white;
+}
+
+#form-group #productName {
+    cursor: not-allowed;
+    background-color: red;
+}
+
+
+
+
 
 /* mobiles */
 
