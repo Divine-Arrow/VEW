@@ -465,6 +465,7 @@ textarea:focus {
 .btn:hover {
     background-color: #e48743;
     color: black;
+    font-weight: 600;
 }
 
 
