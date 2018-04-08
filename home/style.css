@@ -13,12 +13,6 @@
     top: 0px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    right: 0;
-    top: 75px;
-}
-
 /* services */
 
 #service {
@@ -59,8 +53,9 @@
 #mission {
     padding-top: 28px;
     padding-bottom: 82px;
-    background-image: url(../assets/slics/our-mission-background-image.png);
+    background: url(../assets/slics/our-mission-background-image.png) no-repeat top center;
     background-repeat: no-repeat;
+    background-color: #e8f5fa;
 }
 
 .custom-mission-p {
@@ -199,13 +194,8 @@
 }
 
 .coustom-product-img {
-    border-bottom: 1px solid #d4d4d4;
-    text-align: center;
-    z-index: 1 !important;
-    position: relative;
-    transition: all 0.8s;
-    border-radius: 2px;
-    border: 1px solid rgba(161, 161, 161, 0.97);
+    transition: all 0.35s;
+    width: 100%;
 }
 
 /* product shell */
@@ -219,7 +209,7 @@
 }
 
 .cont:hover img {
-    transform: scale(1.15);
+    transform: scale(1.15) rotate(7deg);
     background-color: red;
     filter: brightness(0.5);
 
@@ -261,7 +251,7 @@
 }
 
 .effect i {
-    border: 2px solid #5fb0ff;
+    border: 2px solid #e48743;
     overflow: hidden;
     padding: 0px 0px;
     width: 135px;
@@ -271,7 +261,7 @@
     top: 65%;
     left: 50%;
     color: #ffffff;
-    background-color: #2E8AAA;
+    background-color: #e48743;
     cursor: pointer;
     transform: translate(-50%, -50%);
 }
@@ -282,10 +272,9 @@
     text-align: center;
     margin-top: 60px;
     color: white;
-    background-color: rgba(40, 40, 40, 0.85);
+    background-color: #e48743;
     padding: 0px 0px;
     text-transform: capitalize;
-    border: 2px solid #56a5fc;
     border-right: 0px;
     border-left: 0px;
 }
@@ -298,7 +287,7 @@
 
 
 .coustom-par-fix p {
-    font-size: 16px;
+    font-size: 20px;
     padding: 2px 0px;
 }
 
@@ -345,8 +334,16 @@
 
 .custom-about-contact-col {
     height: 320px;
-    border: 2px solid #ecebeb;
+    border: 1px solid #cecece;
     background-color: #ffffff;
+}
+
+.custom-about-contact-col:hover:after {
+    box-shadow: none;
+}
+
+.custom-about-contact-col i {
+    color: #5d5d5d;
 }
 
 .custom-effect3 {
@@ -387,8 +384,9 @@ form {
     padding-top: 30px;
 }
 
-input:focus, textarea:focus {
-    border: 1px solid #0099cb !important;
+input:focus,
+textarea:focus {
+    border: 1px solid #e48743 !important;
     box-shadow: none !important;
 }
 
@@ -433,7 +431,7 @@ input:focus, textarea:focus {
     top: 27%;
     left: 15%;
     font-size: 20px;
-
+    color: #353535;
 }
 
 .custom-pos2 {
@@ -447,12 +445,26 @@ input:focus, textarea:focus {
     margin-left: 28px;
 }
 
+.form-control {
+    background-color: white;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.form-control ~ i {}
+
 .btn {
     color: white;
     background-color: black;
     width: 120px;
     font-size: 18px;
     border-radius: 0px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #e48743;
+    color: black;
 }
 
 
@@ -626,6 +638,27 @@ input:focus, textarea:focus {
     #coustom_product_category {
         padding-top: 25px;
     }
+
+    .effect p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 60px;
+        color: white;
+        background-color: #e48743;
+        padding: 0px 0px;
+        text-transform: capitalize;
+        border-right: 0px;
+        border-left: 0px;
+    }
+
+    .coustom-par-fix > .effect > p {
+        font-size: 20px;
+        line-height: 23px;
+        padding: 3px 0px;
+        margin-top: 35px;
+    }
+
 
     .cont {
         width: 260px;

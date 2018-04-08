@@ -57,19 +57,8 @@ fotter .row a {
     padding: 10px 0px;
 }
 
-
-.contactmail a:after {
-    content: ' ';
-    height: 2px;
-    background-color: transparent;
-    display: block;
-    width: 95%;
-    margin: auto;
-    transition: all 0.2s;
-}
-
-.contactmail a:hover:after {
-    background: #ff2525;
+.contactmail a:hover {
+    color: #e48743;
 }
 
 @media only screen and (min-width: 280px) and (max-width:600px) {
