@@ -48,7 +48,8 @@ label {
     color: white;
 }
 
-.form-group, .form-row {
+.form-group,
+.form-row {
     margin-top: 3px;
 }
 
@@ -71,9 +72,344 @@ label {
     color: white;
 }
 
-#form-group #productName {
+.form-group #productName {
     cursor: not-allowed;
-    background-color: red;
+}
+
+/* to remove unwanted arrow*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+
+/* button */
+
+* {
+    -webkit-transition: all 0.15s;
+    -moz-transition: all 0.15s;
+    -o-transition: all 0.15s;
+    -ms-transition: all 0.15s;
+    transition: all 0.15s;
+    outline: none;
+}
+
+button {
+    font-size: 19px;
+    font-family: 'roboto', sans-serif;
+    overflow: visible;
+    border-radius: 3px;
+    position: relative;
+    padding-right: 30px;
+    background-color: #ecfbff;
+    border: 2px solid #a6e0ee;
+    color: #2d7586;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 45px;
+    width: 155px;
+    cursor: pointer;
+}
+
+button p {
+    margin-bottom: 0px;
+    transition: all 0.15s cubic-bezier(0, 0, .48, 1.5);
+}
+
+button:hover {
+    background-color: #ddf7ff;
+}
+
+button:hover svg {
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: translate(0px,-15px) rotate(40deg);
+    -webkit-transition: -webkit-transform 0.15s;
+    -moz-transition: -moz-transform 0.15s;
+    -o-transition: -o-transform 0.15s;
+    -ms-transition: -ms-transform 0.15s;
+    transition: transform 0.15s;
+}
+
+button svg {
+    position: absolute;
+    top: 47%;
+    right: 8%;
+    transform: translate(-50%,-50%);
+    height: 30px;
+    width: auto;
+    -webkit-transition: -webkit-transform 0.15s;
+    -moz-transition: -moz-transform 0.15s;
+    -o-transition: -o-transform 0.15s;
+    -ms-transition: -ms-transform 0.15s;
+    transition: transform 0.15s;
+}
+
+button svg path {
+    fill: #2d7586;
+}
+
+button.clicked {
+    background-color: #cff5b3;
+    border: 2px solid #cff5b3;
+    color: #6aaa3b;
+    padding-right: 6px;
+    cursor: default;
+    transition: all 0.3s cubic-bezier(0.1, 0.08, 0.68, 2);
+}
+
+button.clicked svg {
+    -webkit-animation: flyaway 1.3s linear;
+    -moz-animation: flyaway 1.3s linear;
+    -o-animation: flyaway 1.3s linear;
+    -ms-animation: flyaway 1.3s linear;
+    animation: flyaway 1.3s linear;
+    top: -80px;
+    right: -1000px;
+}
+
+button.clicked svg path {
+    fill: #6aaa3b;
+}
+
+@-moz-keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -1000px;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@-webkit-keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -1000px;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@-o-keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -1000px;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -1000px;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
 }
 
 
