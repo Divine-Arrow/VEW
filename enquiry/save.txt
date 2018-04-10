@@ -1,30 +1,453 @@
-<!-- Button container -->
-                    <div class="download-button-container">
-                        <!-- The real button -->
-                        <button type="submit" class="download-button">
-                            <span class="button-text-real hidden">download</span>
-                            <!-- Extra elements to perform the animations -->
-                            <span class="button-icon">
-                                <span class="button-linear-progress">
-                                    <span class="button-linear-progress-bar"></span>
-                                </span>
-                                <svg class="button-icon-svg" viewBox="0 0 60 60">
-                                    <path class="button-icon-path button-icon-path-square" d="M 20 40 l 0 -20 l 20 0 l 0 20 Z"></path>
-                                    <path class="button-icon-path button-icon-path-line" d="M 40 20 l -20 20"></path>
-                                </svg>
-                            </span>
+
+                    <div class="animate_area">
+                        <button>
+                          <p>Send</p>
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                            <path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
+                        M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path> 
+                          </svg>
                         </button>
-                        <!-- Extra elements to perform the animations -->
-                        <svg class="border-svg" width="240px" height="100px" viewBox="0 0 240 100">
-                            <path class="border-path hidden" d="M 40 3.5 a 36.5 36.5 0 0 0 -36.5 36.5 a 36.5 36.5 0 0 0 36.5 36.5 C 70 76.5 90 76.5 120 76.5 S 170 76.5 200 76.5 a 36.5 36.5 0 0 0 36.5 -36.5 a 36.5 36.5 0 0 0 -36.5 -36.5 Z"></path>
-                        </svg>
-                        <span class="button-text button-text-download">download</span>
-                        <span class="button-text button-text-done">done!</span>
-                        <div class="button-wave"></div>
-                        <div class="button-progress-container">
-                            <svg class="button-svg">
-                                <path class="button-circular-progress" d="M 50 50 m 0 -32.5 a 32.5 32.5 0 0 1 0 65 a 32.5 32.5 0 0 1 0 -65"></path>
-                            </svg>
-                            <span class="button-ball"></span>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                     /* style */
+                     
+                     /* button */
+
+* {
+    -webkit-transition: all 0.15s;
+    -moz-transition: all 0.15s;
+    -o-transition: all 0.15s;
+    -ms-transition: all 0.15s;
+    transition: all 0.15s;
+    outline: none;
+}
+
+button {
+    font-size: 19px;
+    font-family: 'roboto', sans-serif;
+    overflow: visible;
+    border-radius: 3px;
+    position: relative;
+    padding-right: 30px;
+    background-color: #ecfbff;
+    border: 2px solid #a6e0ee;
+    color: #2d7586;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 45px;
+    width: 155px;
+    cursor: pointer;
+}
+
+button p {
+    margin-bottom: 0px;
+    transition: all 0.15s cubic-bezier(0, 0, .48, 1.5);
+}
+
+button:hover {
+    background-color: #ddf7ff;
+}
+
+button:hover svg {
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: translate(0px, -15px) rotate(40deg);
+    -webkit-transition: -webkit-transform 0.15s;
+    -moz-transition: -moz-transform 0.15s;
+    -o-transition: -o-transform 0.15s;
+    -ms-transition: -ms-transform 0.15s;
+    transition: transform 0.15s;
+}
+
+button svg {
+    position: absolute;
+    top: 47%;
+    right: 8%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: auto;
+    -webkit-transition: -webkit-transform 0.15s;
+    -moz-transition: -moz-transform 0.15s;
+    -o-transition: -o-transform 0.15s;
+    -ms-transition: -ms-transform 0.15s;
+    transition: transform 0.15s;
+}
+
+
+button svg path {
+    fill: #2d7586;
+}
+
+button.clicked {
+    background-color: #cff5b3;
+    border: 2px solid #cff5b3;
+    color: #6aaa3b;
+    padding-right: 6px;
+    cursor: default;
+    transition: all 0.3s cubic-bezier(0.1, 0.08, 0.68, 2);
+}
+
+button.clicked svg {
+    -webkit-animation: flyaway 1.3s linear;
+    -moz-animation: flyaway 1.3s linear;
+    -o-animation: flyaway 1.3s linear;
+    -ms-animation: flyaway 1.3s linear;
+    animation: flyaway 1.3s linear;
+    top: -80px;
+    /*right: -1000px;
+    right: -613px;*/
+    right: -380%;
+}
+
+button.clicked svg path {
+    fill: #6aaa3b;
+}
+
+.animate_area {
+    display: block;
+    width: 100%;
+    /*bottom: 0px;
+    left: 0px;
+    overflow: hidden;*/
+}
+
+@-moz-keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -380%;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@-webkit-keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -380%;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@-o-keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -380%;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+@keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg) scale(1);
+        transform: rotate(10deg);
+        top: 13px;
+        right: 25px;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg) scale(1.6);
+        top: 13px;
+        right: 0px;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg) scale(1.6);
+        top: 13px;
+        right: -130px;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg) scale(1.6);
+        top: -40px;
+        right: -280px;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -200px;
+        right: -380%;
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* mobiles */
+
+@media screen and (max-width:480px) {}
+
+/* landscape mobile */
+
+@media screen and (min-width:481px) and (max-width:767px) {}
+
+/* tablet */
+
+@media screen and (min-width:768px) and (max-width:1023px) {}
+
+/* desktop */
+
+@media screen and (min-width:1024px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ form 
+ 
+ 
+ 
+  <!--<form>
+                    <div class="form-group">
+                        <label for="disabledTextInput">Product</label>
+                        <input type="text" id="productName" class="form-control" placeholder="Product Name" disabled>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputAddress">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="123@xyz.com" required>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">State</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputCity">Country</label>
+                            <input type="text" class="form-control" id="inputCity" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="required_sign" for="inputZip" required="">Zip Code</label>
+                            <input type="number" class="form-control" id="inputZip" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Your Message"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    
+                </form>-->
