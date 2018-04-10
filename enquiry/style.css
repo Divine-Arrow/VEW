@@ -1,11 +1,7 @@
-body {
-
-}
-
 #enquiry {
     width: 100%;
-    height: 87vh;
-    background-color: #eaeaea;
+    height: 85vh;
+    background-color: #e7ecf0;
     position: relative;
 }
 
@@ -13,25 +9,291 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 20px 2px rgba(127, 127, 127, 0.72);
+    transform: translate(-50%, -50%);
     width: 800px;
-    height: 500px;
     background-color: #2a2b35;
     border-radius: 3px;
-    
     color: white;
 }
 
-#enquiry .container {
+/* alert */
+.alert_wrapper {
+    padding: 0px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0px;
+    left: 0px;
+    transform: translateY(-100%);
 }
 
-#enquiry .productName p {
+.alert {
+    margin-bottom: 0px;
+    border-radius: 0px;
     text-align: center;
-    font-size: 25px;
+    font-family: 'roboto', sans-serif;
+}
+
+/*
+#enquiry .productName {
+    border-bottom: 2px solid #ff8601;
+}*/
+
+.productName {
+    margin-bottom: 30px;
+}
+
+#enquiry .productName p,
+#enquiry .productName h6 {
+    text-align: center;
+    font-size: 22px;
     color: white;
+    font-family: 'roboto', sans-serif;
+}
+
+#enquiry .productName h6 {
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: #ff8601;
+    padding-top: 20px;
+}
+
+.required_sign:after {
+    content: " *";
+}
+
+.forms {
+    padding-top: 10px;
+}
+
+form {
+    width: 90%;
+    margin: auto;
+}
+
+.form-group {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+#enquiry input,
+#enquiry textarea {
+    background-color: #ff8601;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 0px 0px 2px 5px;
+    border-bottom: 1px solid #ff8601;
+    border-bottom: 1px solid rgba(255, 134, 1, 0.65);
+    border-radius: 0px;
+    color: white;
+    position: relative;
+}
+
+#enquiry #inputMessage {
+    height: 100px;
+}
+
+#enquiry label {
+    position: absolute;
+    top: 0px;
+    color: #e5e5e5;
+    padding-left: 3px;
+    pointer-events: none;
+    transition: all 0.3s;
+    font-size: 18px;
+}
+
+.left-side {
+    border-right: 1px solid #b5b5b5;
+}
+
+/*
+
+#enquiry input:focus ~ label,
+#enquiry textarea:focus ~ label,
+#enquiry input:valid ~ label,
+#enquiry textarea:valid ~ label{
+    top: -28px;
+    padding-left: 0px;
+    color: #888888;
+}
+
+*/
+
+#enquiry input:focus ~ label,
+#enquiry textarea:focus ~ label {
+    top: -28px;
+    padding-left: 0px;
+    color: #888888;
+}
+
+#enquiry input:focus,
+#enquiry textarea:focus {
+    border-bottom-color: #f66d6d;
+}
+
+#enquiry input:valid ~ label,
+#enquiry textarea:valid ~ label {}
+
+
+#enquiry input:focus,
+#enquiry textarea:focus {
+    box-shadow: none;
+}
+
+
+
+/* button */
+
+button {
+    font-size: 19px;
+    font-family: 'roboto', sans-serif;
+    overflow: visible;
+    position: relative;
+    background-color: #ff8601;
+    border: none;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+}
+
+button p {
+    margin-bottom: 0px;
+    transition: all 0.15s cubic-bezier(0, 0, .48, 1.5);
+}
+
+button:hover {
+    background-color: #ff8601;
+}
+
+button:hover svg {
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: translate(0px, -15px) rotate(40deg);
+    -webkit-transition: -webkit-transform 0.15s;
+    -moz-transition: -moz-transform 0.15s;
+    -o-transition: -o-transform 0.15s;
+    -ms-transition: -ms-transform 0.15s;
+    transition: transform 0.15s;
+}
+
+button svg {
+    position: absolute;
+    top: 47%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: auto;
+    -webkit-transition: -webkit-transform 0.15s;
+    -moz-transition: -moz-transform 0.15s;
+    -o-transition: -o-transform 0.15s;
+    -ms-transition: -ms-transform 0.15s;
+    transition: transform 0.15s;
+}
+
+
+button svg path {
+    fill: white;
+}
+
+button.clicked {
+    background-color: #cff5b3;
+    color: #6aaa3b;
+    padding-right: 6px;
+    cursor: default;
+    transition: all 0.3s cubic-bezier(0.1, 0.08, 0.68, 2);
+}
+
+button.clicked svg {
+    -webkit-animation: flyaway 1.3s linear;
+    -moz-animation: flyaway 1.3s linear;
+    -o-animation: flyaway 1.3s linear;
+    -ms-animation: flyaway 1.3s linear;
+    animation: flyaway 1.3s linear;
+    top: -60%;
+    right: -50%;
+    opacity: 0;
+}
+
+button.clicked svg path {
+    fill: #6aaa3b;
+}
+
+.animate_area {
+    display: block;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+@keyframes flyaway {
+    0% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg) scale(1);
+        transform: rotate(10deg);
+        top: 47%;
+        right: 30%;
+        height: 30px;
+    }
+    5% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg) scale(1.6);
+        top: 0%;
+        right: 20%;
+        height: 30px;
+    }
+    20% {
+        -webkit-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        transform: rotate(-20deg) scale(1.6);
+        top: -30%;
+        right: 0%;
+        height: 45px;
+    }
+    40% {
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg) scale(1.6);
+        top: -40%;
+        right: -40%;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        -o-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        transform: rotate(60deg);
+        top: -80%;
+        right: -50%
+        height: 0;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
 }
 
 /* mobiles */
