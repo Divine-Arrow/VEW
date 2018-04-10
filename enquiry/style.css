@@ -297,18 +297,31 @@ button.clicked svg path {
     }
 }
 
-/* mobiles */
 
-@media screen and (max-width:480px) {}
+@media screen and (min-width:600px) and (max-width:900px) {
+    
+    #enquiry {
+        height: 115vh;
+    }
+    
+    .enquiry_wrapper {
+        width: 580px;
+    }
+    .enquiry_wrapper .container{
+        max-width: 100% !important;
+    }
+}
 
-/* landscape mobile */
+@media screen and (min-width:400px) and (max-width:600px) {
+    #enquiry {
+        height: 165vh;
+    }
+    
+    .enquiry_wrapper {
+        width: 380px;
+    }
+    .enquiry_wrapper .container{
+        max-width: 100% !important;
+    }
+}
 
-@media screen and (min-width:481px) and (max-width:767px) {}
-
-/* tablet */
-
-@media screen and (min-width:768px) and (max-width:1023px) {}
-
-/* desktop */
-
-@media screen and (min-width:1024px) {}
