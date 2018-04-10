@@ -228,6 +228,7 @@ button.clicked svg {
 
 button.clicked svg path {
     fill: #6aaa3b;
+    fill: #f86011;
 }
 
 .animate_area {
