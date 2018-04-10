@@ -62,6 +62,7 @@ h1 {
 .enquiry a {
     padding: 6px 30px;
     background-color: #9d3bff;
+    background-color: #e48743;
     color: white;
     text-decoration: none;
     border: none;
@@ -75,7 +76,7 @@ h1 {
 }
 
 .enquiry a:hover {
-    background-color: #7b00f6;
+    background-color: #f16600;
     padding: 6px 20px;
 }
 
@@ -83,7 +84,7 @@ h1 {
 
 #table {
     padding: 60px 0px;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 tr:hover {
@@ -145,7 +146,9 @@ table p {
     color: white;
 }
 
-@media only screen and (min-width:750px) and (max-width:1000px) {
+
+
+@media only screen and (min-width:750px) and (max-width:1200px) {
 
     /* Product Image */
     #product img {
@@ -162,16 +165,16 @@ table p {
         max-width: 100%;
     }
     table {
-        font-size: 14px;
+        font-size: 13px;
     }
-
-    .coustom-fix {
-        font-weight: 500;
-    }
-
     .table td,
     .table th {
-        padding: 8px;
+        padding: 6px;
+    }
+    .coustom-fix td,
+    .coustom-fix {
+        font-weight: 500;
+        font-size: 12px;
     }
 }
 

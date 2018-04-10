@@ -131,7 +131,7 @@ button:hover svg {
     -moz-transform: rotate(40deg);
     -o-transform: rotate(40deg);
     -ms-transform: rotate(40deg);
-    transform: translate(0px,-15px) rotate(40deg);
+    transform: translate(0px, -15px) rotate(40deg);
     -webkit-transition: -webkit-transform 0.15s;
     -moz-transition: -moz-transform 0.15s;
     -o-transition: -o-transform 0.15s;
@@ -143,7 +143,7 @@ button svg {
     position: absolute;
     top: 47%;
     right: 8%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 30px;
     width: auto;
     -webkit-transition: -webkit-transform 0.15s;
@@ -152,6 +152,7 @@ button svg {
     -ms-transition: -ms-transform 0.15s;
     transition: transform 0.15s;
 }
+
 
 button svg path {
     fill: #2d7586;
@@ -173,11 +174,21 @@ button.clicked svg {
     -ms-animation: flyaway 1.3s linear;
     animation: flyaway 1.3s linear;
     top: -80px;
-    right: -1000px;
+    /*right: -1000px;
+    right: -613px;*/
+    right: -380%;
 }
 
 button.clicked svg path {
     fill: #6aaa3b;
+}
+
+.animate_area {
+    display: block;
+    width: 100%;
+    /*bottom: 0px;
+    left: 0px;
+    overflow: hidden;*/
 }
 
 @-moz-keyframes flyaway {
@@ -230,7 +241,7 @@ button.clicked svg path {
         -ms-transform: rotate(60deg);
         transform: rotate(60deg);
         top: -200px;
-        right: -1000px;
+        right: -380%;
         height: 0;
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -288,7 +299,7 @@ button.clicked svg path {
         -ms-transform: rotate(60deg);
         transform: rotate(60deg);
         top: -200px;
-        right: -1000px;
+        right: -380%;
         height: 0;
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -346,7 +357,7 @@ button.clicked svg path {
         -ms-transform: rotate(60deg);
         transform: rotate(60deg);
         top: -200px;
-        right: -1000px;
+        right: -380%;
         height: 0;
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -359,7 +370,7 @@ button.clicked svg path {
         -webkit-transform: rotate(10deg);
         -moz-transform: rotate(10deg);
         -o-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
+        -ms-transform: rotate(10deg) scale(1);
         transform: rotate(10deg);
         top: 13px;
         right: 25px;
@@ -370,7 +381,7 @@ button.clicked svg path {
         -moz-transform: rotate(10deg);
         -o-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
-        transform: rotate(10deg);
+        transform: rotate(10deg) scale(1.6);
         top: 13px;
         right: 0px;
         height: 30px;
@@ -380,7 +391,7 @@ button.clicked svg path {
         -moz-transform: rotate(-20deg);
         -o-transform: rotate(-20deg);
         -ms-transform: rotate(-20deg);
-        transform: rotate(-20deg);
+        transform: rotate(-20deg) scale(1.6);
         top: 13px;
         right: -130px;
         height: 45px;
@@ -390,7 +401,7 @@ button.clicked svg path {
         -moz-transform: rotate(10deg);
         -o-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
-        transform: rotate(10deg);
+        transform: rotate(10deg) scale(1.6);
         top: -40px;
         right: -280px;
         opacity: 1;
@@ -404,7 +415,7 @@ button.clicked svg path {
         -ms-transform: rotate(60deg);
         transform: rotate(60deg);
         top: -200px;
-        right: -1000px;
+        right: -380%;
         height: 0;
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
