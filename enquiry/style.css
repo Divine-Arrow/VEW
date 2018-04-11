@@ -37,6 +37,48 @@
     font-family: 'roboto', sans-serif;
 }
 
+
+.alert-danger {
+    background-color: #ffb5bc;
+}
+
+
+.alert p{
+    margin-bottom: 0px;
+    text-transform: capitalize;
+}
+
+.anim p {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-3px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(4px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-6px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(6px, 0, 0);
+    }
+}
+
+
 /*
 #enquiry .productName {
     border-bottom: 2px solid #ff8601;
@@ -86,7 +128,7 @@ form {
     outline: none;
     border: none;
     font-size: 20px;
-    background-color: transparent;
+    background-color: transparent !important;
     padding: 0px 0px 2px 5px;
     border-bottom: 1px solid #ff8601;
     border-bottom: 1px solid rgba(255, 134, 1, 0.65);
@@ -149,6 +191,10 @@ form {
 #enquiry input:focus,
 #enquiry textarea:focus {
     box-shadow: none;
+}
+
+#enquiry input:valid ~ button {
+    background-color: red;
 }
 
 
@@ -242,6 +288,7 @@ button.clicked svg path {
     position: absolute;
     right: 0px;
     bottom: 0px;
+    text-decoration: none !important;
 }
 
 @keyframes flyaway {
