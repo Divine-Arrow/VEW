@@ -7,6 +7,24 @@ target.addEventListener("click" , function() {
     targetPara.innerHTML = "Sent";
 })
 
+
+/* hasvalue label-placeholder */
+
+var forms = document.querySelectorAll(".form-control");
+
+for(var i=0; i<forms.length; i++) {
+    forms[i].addEventListener("focusout", function() {
+        
+        if(this.value.length > 0) {
+            this.classList.add("hasValue");
+        }
+        else {
+            this.classList.remove("hasValue");
+        }
+    })
+}
+
+
 /* for alert */
 
 var allInput = document.querySelectorAll("input, textarea");
@@ -21,5 +39,6 @@ for(var i=0; i<allInput.length; i++) {
 }
 
 send.addEventListener("click", function() {
+    alert.classList.remove("show");
     greet.classList.add("show");
 })
