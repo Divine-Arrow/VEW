@@ -99,7 +99,7 @@
                     <p><strong>Thankyou ! </strong> we will be back to you soon.</p>
                 </div>
             </div>
-            
+
             <div class="alert_wrapper  required fade">
                 <div class="alert alert-danger">
                     <p><strong>* </strong> fields are required.</p>
@@ -115,11 +115,11 @@
                     </div>
 
                     <div class="left-side col-md-5 col-sm-12 col-12">
-                        <form>
+                        <form onsubmit="return false">
                             <div class="form-row">
                                 <div class="  form-group col-sm-12 col-12">
-                                    <input type="text" class="form-control" id="name" required="" >
-                                    <label class="required_sign" for="inputAddress" >Name</label>
+                                    <input type="text" class="form-control" id="name" required="">
+                                    <label class="required_sign" for="inputAddress">Name</label>
                                 </div>
                                 <div class="  form-group col-sm-12 col-12">
                                     <input type="email" class="form-control" id="inputEmail" required="">
@@ -130,7 +130,7 @@
                                     <label for="inputAddress">Adress</label>
                                 </div>
                                 <div class="  form-group col-md-6 col-sm-6 col-12">
-                                    <input type="text" class="form-control" id="city" required="" >
+                                    <input type="text" class="form-control" id="city" required="">
                                     <label class="required_sign" for="inputCity">City</label>
                                 </div>
                                 <div class="form-group col-md-1 col-sm-0 col-0 spacer"></div>
@@ -143,7 +143,7 @@
                     <div class="right-side col-md-7 col-sm-12 col-12">
                         <div class="form-row">
                             <div class="  form-group col-md-6 col-sm-6 col-12">
-                                <input type="text" class="form-control" id="country" required="" >
+                                <input type="text" class="form-control" id="country" required="">
                                 <label class="required_sign" for="inputCountry">Country</label>
                             </div>
                             <div class="  form-group col-md-1 col-sm-0 col-0 spacer"></div>
@@ -157,14 +157,14 @@
                                 <label for="exampleFormControlTextarea1">Message</label>
                             </div>
 
-                            <a href="#" class="animate_area">
+                            <div class="animate_area">
                                 <button>
                                             <p>Send</p>
                                                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z
                                                     M202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path>
                                                   </svg>
                                     </button>
-                            </a>
+                            </div>
 
 
                         </div>

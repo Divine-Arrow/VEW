@@ -1,3 +1,25 @@
+* {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: none;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 #enquiry {
     width: 100%;
     height: 85vh;
@@ -43,7 +65,7 @@
 }
 
 
-.alert p{
+.alert p {
     margin-bottom: 0px;
     text-transform: capitalize;
 }
@@ -237,6 +259,7 @@ button:hover svg {
     -o-transition: -o-transform 0.15s;
     -ms-transition: -ms-transform 0.15s;
     transition: transform 0.15s;
+    outline: none !important;
 }
 
 button svg {
@@ -251,6 +274,7 @@ button svg {
     -o-transition: -o-transform 0.15s;
     -ms-transition: -ms-transform 0.15s;
     transition: transform 0.15s;
+    outline: none !important;
 }
 
 
@@ -263,6 +287,7 @@ button.clicked {
     color: #6aaa3b;
     padding-right: 6px;
     cursor: default;
+    outline: none !important;
     transition: all 0.3s cubic-bezier(0.1, 0.08, 0.68, 2);
 }
 
@@ -275,11 +300,13 @@ button.clicked svg {
     top: -60%;
     right: -50%;
     opacity: 0;
+    outline: none !important;
 }
 
 button.clicked svg path {
     fill: #6aaa3b;
     fill: #f86011;
+    outline: none !important;
 }
 
 .animate_area {

@@ -14,25 +14,25 @@ for (var i = 0; i < forms.length; i++) {
 }
 
 
-/* for alert */
+/* for alertSection */
 
 var allInput = document.querySelectorAll("input, textarea");
-var alert = document.querySelector(".required");
+var alertSection = document.querySelector(".required");
 var greet = document.querySelector(".greet");
 var send = document.querySelector(".animate_area button");
 
 for (var i = 0; i < allInput.length; i++) {
     allInput[i].addEventListener("click", function () {
-        alert.classList.add("show");
+        alertSection.classList.add("show");
     })
 }
 
 send.addEventListener("click", function () {
     checker = inputValid();
     if (checker) {
-        alert.classList.remove("show");
+        alertSection.classList.remove("show");
         greet.classList.add("show");
-    }
+    };
 })
 
 /* for button animation */
@@ -49,13 +49,23 @@ var inputValid = function () {
     return true;
 };
 
+var clearFields = function () {
+    for (var i = 0; i < allInput.length; i++) {
+        allInput[i].value = "";
+    }
+
+    target.classList.remove('clicked');
+    for (var i = 0; i < forms.length; i++) {
+        forms[i].classList.remove("hasValue");
+    }
+}
 
 target.addEventListener("click", function () {
     checker = inputValid();
     if (checker) {
-        this.classList.toggle('clicked');
+        this.classList.add('clicked');
         targetPara.innerHTML = "Sent";
-        localStorage.setItem("isSent", true);
+        setTimeout(clearFields, 2000);
     }
 
 });
@@ -65,11 +75,11 @@ target.addEventListener("mouseover", function () {
 
     checker = inputValid();
     if (!checker) {
-        alert.classList.add("show");
-        alert.classList.add("anim");
+        alertSection.classList.add("show");
+        alertSection.classList.add("anim");
     } else {
-        alert.classList.remove("show");
-        alert.classList.remove("anim");
+        alertSection.classList.remove("show");
+        alertSection.classList.remove("anim");
     }
 });
 
@@ -77,11 +87,11 @@ target.addEventListener("mouseout", function () {
 
     checker = inputValid();
     if (!checker) {
-        alert.classList.add("show");
-        alert.classList.remove("anim");
+        alertSection.classList.add("show");
+        alertSection.classList.remove("anim");
     } else {
-        alert.classList.remove("show");
-        alert.classList.remove("anim");
+        alertSection.classList.remove("show");
+        alertSection.classList.remove("anim");
     }
 });
 
@@ -89,15 +99,15 @@ target.addEventListener("mouseout", function () {
 
 /* send thanks */
 
+/*
 var isEnquirySent = localStorage.getItem("isSent");
-/*localStorage.removeItem("isSent");*/
+
 
 window.addEventListener("load", function () {
     if (isEnquirySent) {
         greet.classList.add("show");
-        console.log("enquiry is been sended");
     } else {
-        console.log("enquiry is not sended");
         greet.classList.remove("show");
     }
 });
+*/
