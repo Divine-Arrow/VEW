@@ -65,6 +65,7 @@ target.addEventListener("click", function () {
     if (checker) {
         this.classList.add('clicked');
         targetPara.innerHTML = "Sent";
+        localStorage.removeItem("product");
         setTimeout(clearFields, 2000);
     }
 
@@ -97,17 +98,14 @@ target.addEventListener("mouseout", function () {
 
 
 
-/* send thanks */
+/* product data  */
 
-/*
-var isEnquirySent = localStorage.getItem("isSent");
+var name = localStorage.getItem("product");
+var productName = document.querySelector(".productName p");
 
 
 window.addEventListener("load", function () {
-    if (isEnquirySent) {
-        greet.classList.add("show");
-    } else {
-        greet.classList.remove("show");
+    if (name) {
+        productName.textContent = name;
     }
 });
-*/
