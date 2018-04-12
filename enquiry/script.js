@@ -24,6 +24,15 @@ var send = document.querySelector(".animate_area button");
 for (var i = 0; i < allInput.length; i++) {
     allInput[i].addEventListener("click", function () {
         alertSection.classList.add("show");
+    });
+    
+    /* updating  */
+    allInput[i].addEventListener("change", function() {
+        if (this.value.length > 0) {
+            this.classList.add("hasValue");
+        } else {
+            this.classList.remove("hasValue");
+        }
     })
 }
 
@@ -66,7 +75,7 @@ target.addEventListener("click", function () {
         this.classList.add('clicked');
         targetPara.innerHTML = "Sent";
         localStorage.removeItem("product");
-        setTimeout(clearFields, 2000);
+        setTimeout(clearFields, 1000);
     }
 
 });

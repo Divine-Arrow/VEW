@@ -18,9 +18,7 @@ h1 {
     vertical-align: middle;
 }
 
-#products .image_holder {
-    /*background-color: white !important;*/
-}
+/*
 
 #products img {
     width: auto;
@@ -28,7 +26,6 @@ h1 {
     height: 226.4px;
     text-align: center;
     z-index: 100 !important;
-    /*background-color: #8c87bd;*/
 }
 
 #products .image_holder {
@@ -49,4 +46,47 @@ h1 {
     margin: auto;
     z-index: -1;
     text-transform: capitalize;
+}
+*/
+
+#coustom_product_category {
+    background-color: #e8f5fa;
+    background-color: #ffffff;
+    padding: 40px 0px;
+}
+
+/* product category */
+
+/* heading */
+
+/*.service-our {
+    color: black;
+
+}*/
+
+.effect i {
+    top: 50%;
+}
+
+.coustom-product-img ~ p {
+    font-size: 16px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.cont:hover img {
+    transform: scale(1.15) rotate(6deg);
+    background-color: rgba(0, 0, 0, 0.52);
+}
+
+.cont:hover .effect {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.product-header p {
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    color: #414141;
 }
