@@ -72,7 +72,7 @@ app.post('/send', function(req, res) {
     let mailOptions = {
         from: '"NodeMailer Contact" <bs541156@gmail.com>', // sender address
         to: 'bhupenders225@gmail.com', /* for more use with , userExample@example.com' */
-        subject: 'Harish works website ✔', // Subject line
+        subject: 'Harish works website', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
     };
