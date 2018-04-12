@@ -118,3 +118,4 @@ window.addEventListener("load", function () {
         productName.textContent = name;
     }
 });
+
