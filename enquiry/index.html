@@ -111,11 +111,12 @@
 
                     <div class="col-md-12 productName">
                         <h6>ENQUIRY</h6>
+                        {{msg}}
                         <p>3 - Jaw &amp; 6 - Jaw Accuracy Adjustment Chucks</p>
                     </div> 
 
                     <div class="left-side col-md-5 col-sm-12 col-12">
-                        <form id="contact" method="post" action="/send">
+                        <form id="contact" method="post" action="send">
                             <div class="form-row">
                                 <div class="  form-group col-sm-12 col-12">
                                     <input type="text" class="form-control" id="name" name="fullName" required="">
@@ -126,8 +127,8 @@
                                     <label class="required_sign" for="inputEmail">Email</label>
                                 </div>
                                 <div class="  form-group col-sm-12 col-12">
-                                    <input type="text" class="form-control" id="adress" name="adress">
-                                    <label for="inputAddress">Adress</label>
+                                    <input type="text" class="form-control" id="address" name="address">
+                                    <label for="inputAddress">Address</label>
                                 </div>
                                 <div class="  form-group col-md-6 col-sm-6 col-12">
                                     <input type="text" class="form-control" id="city" name="city" required="">
@@ -158,7 +159,7 @@
                             </div>
 
                             <div class="animate_area">
-                                <button type="submit" value="submit">
+                                <button type="submit">
                                         <p>Send</p>
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="paper-plane-icon" d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955zM202.992,332.528v124.517l58.738-67.927L202.992,332.528z"></path>
                                         </svg>
