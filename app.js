@@ -1,25 +1,38 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars');
+const exphbs = require('hbs');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
+
+const port = process.env.PORT || 3000;
 const app = express();
 
 // View engine setup
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+/*app.engine('handlebars', exphbs());*/
+/*exphbs.registerPartials(__dirname + '/public/partials/header');
+exphbs.registerPartials(__dirname + '/public/partials/fotter');*/
+exphbs.registerPartials(__dirname + '/views');
+/*hbs.registerPartials(__dirname + '/views/partials/fotter');*/
+app.set('view engine', 'hbs');
+
 
 // public/static folder
-app.use('/enquiry', express.static(path.join(__dirname, 'enquiry')));
+/*app.use('/public', express.static(path.join(__dirname, 'public')));*/
+app.use('/public', express.static('public'));
 
+/*app.use(express.static(__dirname + '/public'));*/
 
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.render('enquiry');
+    res.render('index');
+});
+
+app.get('/enquiry', (req, res) => {
+    res.render('enquiry.hbs');
 });
 
 app.post('/send', function(req, res) {
@@ -91,4 +104,9 @@ app.post('/send', function(req, res) {
 
 });
 
-app.listen(3000, () => console.log('server started...'));
+// app.listen(3000, () => 
+// console.log('server started...'));
+
+app.listen(port, () => {
+    console.log("Started... hello from console");
+})

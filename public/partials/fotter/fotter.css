@@ -1,0 +1,87 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+fotter {
+    display: block;
+    background: url('images/fotter_Backgroud.jpg') no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+fotter p::selection, fotter a::selection {
+    background-color: #ffffff;
+    color: #151515;
+}
+
+fotter .row a {
+    color: white;
+}
+
+.contactmail p,
+.contactmail a,
+.contact-number p {
+    display: inline-block;
+    font-size: 19px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    padding: 0px 4px;
+}
+
+.contactmail span {
+    display: none;
+}
+
+.contactmail,
+.contact-number {
+    text-align: center;
+    margin: 0px;
+    padding: 25px 0px 14px 0px;
+    border: 2px dashed #ffffff;
+    border-width: 0px 0px 1.5px 0px;
+}
+
+.contactmail:nth-child(2) {
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+.contact-number {
+    padding: 0px;
+    border: none;
+}
+
+.contact-number p {
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+.contactmail a:hover {
+    color: #e48743;
+}
+
+@media only screen and (min-width: 280px) and (max-width:600px) {
+    /* remove | */
+    .contactmail:first-child p:not(:first-child) {
+        display: none;
+    }
+    .contactmail span {
+        display: inline-block;
+    }
+    .contactmail p,
+    .contactmail a,
+    .contact-number p {
+        font-size: 15px;
+        padding: 0px 0px;
+    }
+    .contactmail:nth-child(2) {
+        padding: 5px 0px;
+    }
+    .contact-number {
+        padding: 3px 0px;
+    }
+    .contact-number p {
+        padding: 0px 0px;
+    }
+}
