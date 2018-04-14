@@ -6,48 +6,19 @@
 h1 {
     font-size: 34px;
     font-family: 'roboto', sans-serif;
-    color: #e48743;
+    color: #2c3e50;
     text-align: center;
     font-weight: 400;
 }
 
 #jumbotron i {
-    color: #2c3e50;
+    color: #e48743;
     font-size: 20px;
     margin-bottom: 3px;
     vertical-align: middle;
 }
 
-/*
-
-#products img {
-    width: auto;
-    width: 100%;
-    height: 226.4px;
-    text-align: center;
-    z-index: 100 !important;
-}
-
-#products .image_holder {
-    margin-top: 30px;
-}
-
-
-#products .image_holder p {
-    font-size: 19px;
-    line-height: 24px;
-    text-align: center;
-    font-family: "roboto", sans-serif;
-    font-weight: 500;
-    padding: 2px 0px;
-    background-color: #3088e9;
-    color: white;
-    display: block;
-    margin: auto;
-    z-index: -1;
-    text-transform: capitalize;
-}
-*/
+/* product */
 
 #coustom_product_category {
     background-color: #e8f5fa;
@@ -55,27 +26,77 @@ h1 {
     padding: 40px 0px;
 }
 
-/* product category */
+.product_image {
+    background: url("../1/images/one.jpg") no-repeat center;
+    width: 322px;
+    height: 214px;
+    display: block;
+    transition: all 0.25s;
 
-/* heading */
+}
 
-/*.service-our {
-    color: black;
+.first_block {
+    transform: scale(1.5);
+}
 
-}*/
+.second_block {
+    background: url("../2/images/one.jpg") no-repeat center;
+    transform: scale(1.3);
+}
+
+.third_block {
+    background: url("../3/images/one.png") no-repeat center;
+    transform: scale(1.3);
+}
+
+.fourth_block {
+    background: url("../4/images/one.jpg") no-repeat center;
+}
+
+.fifth_block {
+    background: url("../5/images/one.jpg") no-repeat center;
+}
+
+.sixth_block {
+    background: url("../6/images/one.jpg") no-repeat center;
+    background-color: #012f53 !important;
+}
+
+.seventh_block {
+    background: url("../7/images/seven.jpg") no-repeat center;
+    background-color: #012f53 !important;
+}
+
+.eighth_block {
+    background: url("../8/images/one.png") no-repeat center;
+    background-color: #012f53 !important;
+}
+
+.ninth_block {
+    background: url("../9/images/one.jpg") no-repeat center;
+    background-color: #012f53 !important;
+}
+
+.tenth_block {
+    background: url("../10/images/one.jpg") no-repeat center;
+}
+
+
 
 .effect i {
     top: 50%;
 }
 
-.coustom-product-img ~ p {
-    font-size: 16px !important;
+#coustom_product_category p {
+    font-size: 17px !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.cont:hover img {
+.cont:hover img,
+.cont:hover .product_image {
     transform: scale(1.15) rotate(6deg);
-    background-color: rgba(0, 0, 0, 0.52);
+    filter: brightness(0.5);
+    background-color: rgba(128, 128, 128, 0.68);
 }
 
 .cont:hover .effect {

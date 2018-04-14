@@ -210,12 +210,11 @@
 
 .cont:hover img {
     transform: scale(1.15) rotate(7deg);
-    background-color: red;
     filter: brightness(0.5);
 
 }
 
-.coustom-product-img ~ p {
+.coustom-product-img ~ p, #coustom_product_category p {
     font-size: 23px;
     text-align: center;
     font-family: "roboto", sans-serif;
