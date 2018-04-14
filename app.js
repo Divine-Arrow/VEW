@@ -13,7 +13,6 @@ const app = express();
 /*exphbs.registerPartials(__dirname + '/public/partials/header');
 exphbs.registerPartials(__dirname + '/public/partials/fotter');*/
 exphbs.registerPartials(__dirname + '/views');
-/*hbs.registerPartials(__dirname + '/views/partials/fotter');*/
 app.set('view engine', 'hbs');
 
 
@@ -108,5 +107,5 @@ app.post('/send', function(req, res) {
 // console.log('server started...'));
 
 app.listen(port, () => {
-    console.log("Started... hello from console");
+    console.log("Started...");
 })
