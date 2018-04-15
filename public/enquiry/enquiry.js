@@ -18,16 +18,15 @@ for (var i = 0; i < forms.length; i++) {
 
 var allInput = document.querySelectorAll("input, textarea");
 var alertSection = document.querySelector(".required");
-var greet = document.querySelector(".greet");
 var send = document.querySelector(".animate_area button");
 
 for (var i = 0; i < allInput.length; i++) {
     allInput[i].addEventListener("click", function () {
         alertSection.classList.add("show");
     });
-    
+
     /* updating  */
-    allInput[i].addEventListener("change", function() {
+    allInput[i].addEventListener("change", function () {
         if (this.value.length > 0) {
             this.classList.add("hasValue");
         } else {
@@ -40,7 +39,6 @@ send.addEventListener("click", function () {
     checker = inputValid();
     if (checker) {
         alertSection.classList.remove("show");
-        greet.classList.add("show");
     };
 })
 
@@ -109,13 +107,21 @@ target.addEventListener("mouseout", function () {
 
 /* product data  */
 
-var name = localStorage.getItem("product");
-var productName = document.querySelector(".productName p");
+
 
 
 window.addEventListener("load", function () {
-    if (name) {
-        productName.textContent = name;
-    }
-});
 
+    var name = localStorage.getItem("product");
+    var productName = document.querySelectorAll(".productName p");
+    var productNameInp = document.querySelector(".productNameInp");
+    
+    if (name) {
+        productNameInp.value = name.toUpperCase();
+    } else if (name == null) {
+        productNameInp.parentNode.removeChild(productNameInp);
+        console.log("this runs");
+    }
+    
+    localStorage.removeItem("product");
+});

@@ -25,12 +25,6 @@
     <!-- background -->
     <section id="enquiry">
         <div class="enquiry_wrapper">
-            <div class="alert_wrapper greet fade">
-                <div class="alert  alert-success">
-                    <p><strong>Thankyou ! </strong> we will be back to you soon.</p>
-                </div>
-            </div>
-
             <div class="alert_wrapper  required fade">
                 <div class="alert alert-danger">
                     <p><strong>* </strong> fields are required.</p>
@@ -42,38 +36,43 @@
 
                     <div class="col-md-12 productName">
                         <h6>ENQUIRY</h6>
-                        {{msg}}
-                        <p>3 - Jaw &amp; 6 - Jaw Accuracy Adjustment Chucks</p>
-                    </div> 
+                        <input class="m-auto d-block productNameInp text-center border-bottom-0" type="text">
+                        <p>{{msg}}</p>
+                    </div>
 
                     <div class="left-side col-md-5 col-sm-12 col-12">
-                        <form id="contact" method="post" action="send">
+                        <form id="contact" method="post" action="">
                             <div class="form-row">
-                                <div class="  form-group col-sm-12 col-12">
+                                <div class="form-group col-sm-12 col-12">
                                     <input type="text" class="form-control" id="name" name="fullName" required="">
                                     <label class="required_sign" for="inputAddress">Name</label>
                                 </div>
-                                <div class="  form-group col-sm-12 col-12">
+                                <div class="form-group col-sm-12 col-12">
                                     <input type="email" class="form-control" id="inputEmail" name="mailId" required="">
                                     <label class="required_sign" for="inputEmail">Email</label>
                                 </div>
-                                <div class="  form-group col-sm-12 col-12">
+                                <div class="form-group col-sm-12 col-12">
                                     <input type="text" class="form-control" id="address" name="address">
                                     <label for="inputAddress">Address</label>
                                 </div>
-                                <div class="  form-group col-md-6 col-sm-6 col-12">
-                                    <input type="text" class="form-control" id="city" name="city" required="">
-                                    <label class="required_sign" for="inputCity">City</label>
+                                <div class="form-group col-sm-12 col-12">
+                                    <input type="text" class="form-control" id="phone" name="phoneNumber">
+                                    <label for="inputNumber">Phone Number</label>
                                 </div>
-                                <div class="form-group col-md-1 col-sm-0 col-0 spacer"></div>
-                                <div class="  form-group col-md-5 col-sm-6 col-12">
-                                    <input type="text" class="form-control" id="state" name="state">
-                                    <label for="inputState">State</label>
-                                </div>
+
                             </div>
                     </div>
                     <div class="right-side col-md-7 col-sm-12 col-12">
                         <div class="form-row">
+                            <div class="  form-group col-md-6 col-sm-6 col-12">
+                                <input type="text" class="form-control" id="city" name="city" required="">
+                                <label class="required_sign" for="inputCity">City</label>
+                            </div>
+                            <div class="form-group col-md-1 col-sm-0 col-0 spacer"></div>
+                            <div class="  form-group col-md-5 col-sm-6 col-12">
+                                <input type="text" class="form-control" id="state" name="state">
+                                <label for="inputState">State</label>
+                            </div>
                             <div class="  form-group col-md-6 col-sm-6 col-12">
                                 <input type="text" class="form-control" id="country" name="country" required="">
                                 <label class="required_sign" for="inputCountry">Country</label>
@@ -85,7 +84,7 @@
                             </div>
 
                             <div class="  form-group col-sm-12 col-12">
-                                <textarea class="form-control" id="inputMessage" rows="3" name="message"></textarea>
+                                <textarea class="form-control" id="inputMessage" rows="2" name="message"></textarea>
                                 <label for="exampleFormControlTextarea1">Message</label>
                             </div>
 
