@@ -30,7 +30,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/enquiry', (req, res) => {
-    res.render('enquiry.hbs');
+    res.render('enquiry');
+});
+
+app.get('/work_holding_chucks', (req, res) => {
+    res.render('work_holding_chucks');
 });
 
 /* post */
