@@ -1,0 +1,88 @@
+body {
+    background-color: #f7f7f7 !important;
+}
+
+#jumbotron,
+.jumbotron {
+    background-color: #c8e8f2;
+}
+
+h1 {
+    font-size: 34px;
+    font-family: 'roboto', sans-serif;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 400;
+}
+
+#jumbotron i {
+    color: #e48743;
+    font-size: 20px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+}
+
+/* product */
+
+#coustom_product_category {
+    background-color: transparent;
+    padding: 40px 0px;
+}
+
+.cont {
+    background-color: white;
+}
+
+.product_image {
+    background: url("images/one.jpg") no-repeat center;
+    width: 322px;
+    height: 214px;
+    display: block;
+    transition: all 0.25s;
+    background-size: contain;
+
+}
+
+.second_block {
+    background: url("images/two.jpg") no-repeat center;
+    transform: scale(0.9);
+    background-size: contain;
+}
+
+.third_block {
+    background: url("images/three.jpg") no-repeat center;
+    transform: scale(0.9);
+    background-size: contain;
+}
+
+
+
+.effect i {
+    top: 50%;
+}
+
+#coustom_product_category p {
+    font-size: 17px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.cont:hover img,
+.cont:hover .product_image {
+    transform: scale(1.15) rotate(6deg);
+    filter: brightness(0.5);
+    background-color: rgba(128, 128, 128, 0.68);
+}
+
+.cont:hover .effect {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.product-header p {
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    color: #414141;
+}
+
