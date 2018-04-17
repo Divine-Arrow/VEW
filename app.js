@@ -37,6 +37,10 @@ app.get('/work_holding_chucks', (req, res) => {
     res.render('work_holding_chucks');
 });
 
+app.get('/pipeThreding', (req, res) => {
+    res.render('pipe threding');
+});
+
 /* post */
 
 app.post('/', function (req, res) {
