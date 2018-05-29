@@ -35,7 +35,7 @@ h1 {
 
 .product_image {
     background: url("images/one.jpg") no-repeat center;
-    /*width: 322px;*/
+    width: 322px;
     height: 214px;
     display: block;
     transition: all 0.25s;
@@ -46,23 +46,12 @@ h1 {
 .second_block {
     background: url("images/two.jpg") no-repeat center;
     transform: scale(0.9);
-    background-size: cover;
+    background-size: contain;
 }
 
 .third_block {
     background: url("images/three.jpg") no-repeat center;
     transform: scale(0.9);
-    background-size: cover;
-}
-
-.fourth_block {
-    background: url("images/four.jpg") no-repeat center;
-    transform: scale(0.9);
-    background-size: cover;
-}
-
-.fifth_block {
-    background: url("images/five.jpg") no-repeat center;
     background-size: contain;
 }
 
@@ -96,3 +85,4 @@ h1 {
     position: relative;
     color: #414141;
 }
+

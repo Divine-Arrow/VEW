@@ -31,7 +31,7 @@ h1 {
 
 .product_image {
     background: url("images/one.jpg") no-repeat center;
-    width: 322px;
+    /* width: 322px; */
     height: 214px;
     display: block;
     transition: all 0.25s;

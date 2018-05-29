@@ -468,8 +468,6 @@ textarea:focus {
     color: white;
 }
 
-
-
 /* resposive */
 
 @media only screen and (min-width:990px) and (max-width:1200px) {
@@ -560,6 +558,25 @@ textarea:focus {
 
 }
 
+/*for contact 500px*/
+
+@media only screen and (min-width:501px) and (max-width:574px) {
+    .custom-height {
+        height: 400px;
+    }
+    .custom-form2 {
+        width: 88%;
+        padding-left: 38px;
+        margin-left: 26px;
+    }
+    .custom-pos1 {
+        left: 9%;
+    }
+    .custom-pos2 {
+        left: 9%;
+    }
+}
+
 @media only screen and (min-width:280px) and (max-width:500px) {
 
     /* banner */
@@ -642,7 +659,7 @@ textarea:focus {
 
     .effect p {
         font-family: 'Roboto', sans-serif;
-        font-size: 25px;
+        font-size: 23px !important;
         text-align: center;
         margin-top: 60px;
         color: white;
@@ -727,21 +744,4 @@ textarea:focus {
     }
 }
 
-/*for contact 500px*/
 
-@media only screen and (min-width:501px) and (max-width:574px) {
-    .custom-height {
-        height: 400px;
-    }
-    .custom-form2 {
-        width: 88%;
-        padding-left: 38px;
-        margin-left: 26px;
-    }
-    .custom-pos1 {
-        left: 9%;
-    }
-    .custom-pos2 {
-        left: 9%;
-    }
-}

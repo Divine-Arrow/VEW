@@ -37,6 +37,11 @@ app.get('/work_holding_chucks', (req, res) => {
     res.render('work_holding_chucks');
 });
 
+app.get('/magnetic_products', (req, res) => {
+    res.render('magnetic_products');
+});
+
+
 app.get('/magnetic_seprators', (req, res) => {
     res.render('magnetic_seprators');
 });
