@@ -3,4 +3,4 @@ This repository is a client's static website based on the showcase of products ,
 
 
 live demo with node support on 8heroku*
-https://salty-inlet-59852.herokuapp.com/
+https://vew.herokuapp.com/
